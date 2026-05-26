@@ -1,0 +1,2 @@
+startup_stm32h7a3ritx.o: \
+ C:/Users/oxbro/Documents/STM32CustomProjects/CANTesting/CANTestingCube/STM32CubeIDE/Application/User/Startup/startup_stm32h7a3ritx.s

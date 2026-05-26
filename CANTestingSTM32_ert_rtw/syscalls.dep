@@ -1,0 +1,2 @@
+syscalls.o: \
+ C:/Users/oxbro/Documents/STM32CustomProjects/CANTesting/CANTestingCube/STM32CubeIDE/Application/User/Core/syscalls.c
