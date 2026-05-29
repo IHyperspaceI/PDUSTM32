@@ -1,0 +1,596 @@
+VERSION "ConvertedFromExcel"
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_: PDM ETAS DDU7 Tyre STW Motor OXTS
+
+
+BO_ 3221225472 VECTOR__INDEPENDENT_SIG_MSG: 0 Vector__XXX
+ SG_ BPCComplete : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+
+BO_ 257 DDU7_0x101: 8 DDU7
+ SG_ VBrakeR : 0|16@1+ (0.1,0) [0|6553.5] ""  ETAS
+ SG_ VBrakeF : 16|16@1+ (0.1,0) [0|6553.5] ""  ETAS
+ SG_ VThrottlePedal1 : 32|16@1+ (0.1,0) [0|6553.5] ""  ETAS
+ SG_ VThrottlePedal2 : 48|16@1+ (0.1,0) [0|6553.5] ""  ETAS
+
+BO_ 258 DDU7_0x102: 8 DDU7
+ SG_ pBrakeFDDU7 : 0|11@1- (0.1,0) [-50|75] ""  ETAS
+ SG_ pBrakeRDDU7 : 11|11@1- (0.1,0) [-50|75] ""  ETAS
+ SG_ VSteeringAngle : 22|16@1+ (0.1,0) [0|6553.5] ""  ETAS
+ SG_ VDamperPotFL : 38|13@1+ (1,0) [0|8191] ""  ETAS
+ SG_ VDamperPotFR : 51|13@1+ (1,0) [0|8191] ""  ETAS
+
+BO_ 259 STW_0x103: 8 STW
+ SG_ VRegenPaddle2 : 0|8@1+ (1,0) [0|255] ""  DDU7
+ SG_ VRegenPaddle1 : 8|8@1+ (1,0) [0|255] ""  DDU7
+
+BO_ 260 ETAS_0x104: 8 ETAS
+ SG_ VDCInvRLOut : 0|10@1+ (1,0) [0|600] ""  DDU7
+ SG_ pBrakeF : 10|11@1- (0.1,0) [-50|75] ""  DDU7
+ SG_ pBrakeR : 21|11@1- (0.1,0) [-50|75] ""  DDU7
+ SG_ pBrakeMax : 32|10@1+ (0.1,-10) [-10|92.3] ""  DDU7
+ SG_ aSteeringAngle : 42|10@1- (0.1,0) [-51.2|51.1] ""  DDU7
+ SG_ rSteeringAngle : 52|11@1- (0.1,0) [-102.4|102.3] ""  DDU7
+
+BO_ 261 ETAS_0x105: 8 ETAS
+ SG_ IBMSHallEffectOut : 0|12@1+ (0.1,-200) [-200|200] ""  DDU7
+ SG_ BThrottleError : 12|1@1+ (1,0) [0|1] ""  DDU7
+ SG_ BBrakeError : 13|1@1+ (1,0) [0|1] ""  DDU7
+ SG_ BPedalOverlap : 14|1@1+ (1,0) [0|1] ""  DDU7
+ SG_ BAppsOk : 15|1@1+ (1,0) [0|1] ""  DDU7
+ SG_ tBrakeError : 16|5@1+ (1,0) [0|31] ""  DDU7
+ SG_ tPedalOverlap : 21|8@1+ (0.1,0) [0|25.5] ""  DDU7
+ SG_ tThrottleError : 29|5@1+ (1,0) [0|31] ""  DDU7
+ SG_ PActual : 34|11@1- (0.1,0) [-102.4|102.3] ""  DDU7
+ SG_ nYawRateErrorActual : 45|12@1- (0.1,0) [-200|200] ""  DDU7
+ SG_ EOffset : 57|5@1- (1,0) [-16|15] ""  DDU7
+
+BO_ 800 ETAS_0x320: 8 Motor
+ SG_ rSlipRatioOptimal : 60|4@1+ (0.1,0) [0|1.5] "" Vector__XXX
+ SG_ nMotorFLOut : 0|15@1+ (1,-5000) [-5000|25000] ""  DDU7
+ SG_ nMotorFROut : 15|15@1+ (1,-5000) [-5000|25000] ""  DDU7
+ SG_ nMotorRLOut : 30|15@1+ (1,-5000) [-5000|25000] ""  DDU7
+ SG_ nMotorRROut : 45|15@1+ (1,-5000) [-5000|25000] ""  DDU7
+
+BO_ 1029 ETAS_0x405: 8 ETAS
+ SG_ rSlipRatioFLActual : 0|4@1+ (0.1,0) [0|1.5] ""  DDU7
+ SG_ rSlipRatioFRActual : 4|4@1+ (0.1,0) [0|1.5] ""  DDU7
+ SG_ rSlipRatioRLActual : 8|4@1+ (0.1,0) [0|1.5] ""  DDU7
+ SG_ rSlipRatioRRActual : 12|4@1+ (0.1,0) [0|1.5] ""  DDU7
+ SG_ rRegenPaddle : 16|7@1+ (1,0) [0|127] ""  DDU7
+ SG_ BTVOk : 23|1@1+ (1,0) [0|1] ""  DDU7
+ SG_ xDamperFL : 24|8@1- (1,0) [-20|50] ""  DDU7
+ SG_ xDamperFR : 32|8@1- (1,0) [-20|50] ""  DDU7
+ SG_ rThrottlePedal : 40|7@1+ (1,0) [0|127] ""  DDU7
+ SG_ rThrottlePedal1 : 47|7@1+ (1,0) [0|127] ""  DDU7
+ SG_ PPCRegenRequested : 54|10@1+ (-0.1,0) [-102.3|0] ""  DDU7
+
+BO_ 1030 ETAS_0x406: 8 ETAS
+ SG_ BTorqueStatus : 0|1@1+ (1,0) [0|1] ""  DDU7
+ SG_ BIMUOK : 1|1@1+ (1,0) [0|1] ""  DDU7
+ SG_ vChassis : 2|9@1+ (0.1,-10) [-10|41.1] ""  DDU7
+ SG_ vWheelFL : 11|9@1- (0.1,15) [-10.6|40.5] ""  DDU7
+ SG_ vWheelFR : 20|9@1- (0.1,15) [-10.6|40.5] ""  DDU7
+ SG_ vWheelRL : 29|9@1- (0.1,15) [-10.6|40.5] ""  DDU7
+ SG_ vWheelRR : 38|9@1- (0.1,15) [-10.6|40.5] ""  DDU7
+ SG_ rThrottlePedal2 : 47|7@1+ (1,0) [0|127] ""  DDU7
+ SG_ PRegenLimited : 54|10@1+ (0.1,-100) [-100|2.3] ""  DDU7
+
+BO_ 1031 ETAS_0x407: 8 ETAS
+ SG_ TInvRR : 0|7@1+ (1,0) [0|127] ""  DDU7
+ SG_ TInvRL : 7|7@1+ (1,0) [0|127] ""  DDU7
+ SG_ TInvMax : 14|7@1+ (1,0) [0|127] ""  DDU7
+ SG_ TMotorMax : 21|8@1+ (1,0) [0|255] ""  DDU7
+ SG_ TCellMin : 29|10@1+ (0.1,0) [0|102.3] ""  DDU7
+ SG_ NSectorLap : 39|5@1+ (1,0) [0|31] ""  DDU7
+ SG_ VLVSystem : 44|8@1+ (0.1,0) [0|25.5] ""  DDU7
+ SG_ NSectorGlobal : 52|9@1+ (1,0) [0|511] ""  DDU7
+
+BO_ 1032 ETAS_0x408: 8 ETAS
+ SG_ BBMSP0A080Out : 0|1@1+ (1,0) [0|1] ""  DDU7
+ SG_ BBMSP0AC0Out : 1|1@1+ (1,0) [0|1] ""  DDU7
+ SG_ BBMSP0AFAOut : 2|1@1+ (1,0) [0|1] ""  DDU7
+ SG_ BBMSP0A0COut : 3|1@1+ (1,0) [0|1] ""  DDU7
+ SG_ BBMSP0A0EOut : 4|1@1+ (1,0) [0|1] ""  DDU7
+ SG_ BInvErrorFROut : 5|1@1+ (1,0) [0|1] ""  DDU7
+ SG_ BInvErrorRLOut : 6|1@1+ (1,0) [0|1] ""  DDU7
+ SG_ BInvErrorRROut : 7|1@1+ (1,0) [0|1] ""  DDU7
+ SG_ BHVOn : 8|1@1+ (1,0) [0|1] ""  DDU7
+ SG_ BInvErrorResetFL : 9|1@1+ (1,0) [0|1] ""  DDU7
+ SG_ BInvErrorResetFR : 10|1@1+ (1,0) [0|1] ""  DDU7
+ SG_ BInvErrorResetRL : 11|1@1+ (1,0) [0|1] ""  DDU7
+ SG_ BBMSP0A10Out : 12|1@1+ (1,0) [0|1] ""  DDU7
+ SG_ BInvErrorFLOut : 13|1@1+ (1,0) [0|1] ""  DDU7
+ SG_ BSpinningModeOn : 14|1@1+ (1,0) [0|1] ""  DDU7
+ SG_ BBrakeOn : 15|1@1+ (1,0) [0|1] ""  DDU7
+ SG_ BRegenOn : 16|1@1+ (1,0) [0|1] ""  DDU7
+ SG_ BBalancingOnOut : 17|1@1+ (1,0) [0|1] ""  DDU7
+ SG_ BEMSOn : 18|1@1+ (1,0) [0|1] ""  DDU7
+ SG_ BReadyToDriveButton : 19|1@1+ (1,0) [0|1] ""  DDU7
+ SG_ NBMSDLCOut : 20|3@1+ (1,0) [0|7] ""  DDU7
+ SG_ rSplitRear : 23|4@1+ (0.1,0) [0|1.5] ""  DDU7
+ SG_ rSpeedRegenDerateFL : 27|4@1+ (0.1,0) [0|1.5] ""  DDU7
+ SG_ NThrottleMap : 31|4@1+ (1,0) [0|15] ""  DDU7
+ SG_ PEngineBraking : 35|5@1+ (1,0) [0|30] ""  DDU7
+ SG_ VCellDelta : 40|6@1+ (0.01,0) [0|0.63] ""  DDU7
+ SG_ PRegenMax : 46|7@1+ (1,0) [0|127] ""  DDU7
+
+BO_ 1033 ETAS_0x409: 8 ETAS
+ SG_ BInvErrorResetRR : 0|1@1+ (1,0) [0|1] ""  DDU7
+ SG_ rTVMultiplier : 1|4@1+ (0.1,0) [0|1.5] ""  DDU7
+ SG_ RCellAverageOut : 5|9@1+ (0.01,0) [0|5.11] ""  DDU7
+ SG_ VCellAverageOut : 14|9@1+ (0.01,0) [0|5.11] ""  DDU7
+ SG_ tAppsTimer : 23|12@1+ (0.01,0) [0|40.95] ""  DDU7
+ SG_ rEngineBrakingSplit : 35|4@1+ (0.1,0) [0|1.5] ""  DDU7
+ SG_ BPageUp : 39|1@1+ (1,0) [0|1] ""  DDU7
+ SG_ BPageDown : 40|1@1+ (1,0) [0|1] ""  DDU7
+ SG_ BOverpower : 41|1@1+ (1,0) [0|1] ""  DDU7
+ SG_ BDischargeAllowed : 43|1@1+ (1,0) [0|1] ""  DDU7
+ SG_ BEMSDriverSignal1 : 44|1@1+ (1,0) [0|1] ""  DDU7
+ SG_ BEMSDriverSignal2 : 45|1@1+ (1,0) [0|1] ""  DDU7
+ SG_ BEMSDriverSignal3 : 46|1@1+ (1,0) [0|1] ""  DDU7
+ SG_ NPage : 47|4@1+ (1,0) [0|15] ""  DDU7
+ SG_ TCellMax : 51|10@1+ (0.1,0) [0|102.3] ""  DDU7
+
+BO_ 1040 ETAS_0x410: 8 ETAS
+ SG_ MSpinningModeFR : 0|9@1+ (0.1,0) [0|0] ""  DDU7
+ SG_ MSpinningModeRL : 9|9@1+ (0.1,0) [0|0] ""  DDU7
+ SG_ NTractionControlMultiplierFL : 18|7@1+ (0.01,0) [0|0] ""  DDU7
+ SG_ NTractionControlMultiplierFR : 25|7@1+ (0.01,0) [0|0] ""  DDU7
+ SG_ NTractionControlMultiplierRL : 32|7@1+ (0.01,0) [0|0] ""  DDU7
+ SG_ PPCIntegralTermDischarge : 39|7@1- (0.1,-2) [-8.4|-8.4] ""  DDU7
+ SG_ PDischargeDerate : 46|10@1+ (0.1,0) [0|0] ""  DDU7
+ SG_ PPCIntegralTermRegen : 56|7@1- (0.1,-2) [-8.4|-8.4] ""  DDU7
+
+BO_ 1042 ETAS_0x412: 8 ETAS
+ SG_ MRegenMax : 0|5@1+ (1,0) [0|0] ""  DDU7
+ SG_ NTractionControlMultiplierRR : 5|7@1+ (0.01,0) [0|0] ""  DDU7
+ SG_ NABSMultiplierFL : 12|7@1+ (0.01,0) [0|0] ""  DDU7
+ SG_ NABSMultiplierFR : 19|7@1+ (0.01,0) [0|0] ""  DDU7
+ SG_ NABSMultiplierRL : 26|7@1+ (0.01,0) [0|0] ""  DDU7
+ SG_ NABSMultiplierRR : 33|7@1+ (0.01,0) [0|0] ""  DDU7
+ SG_ PPCDischargeRequested : 40|10@1+ (0.1,0) [0|0] ""  DDU7
+ SG_ MDischargeLimited : 50|14@1+ (0.1,0) [0|0] ""  DDU7
+
+BO_ 1043 ETAS_0x413: 8 ETAS
+ SG_ PPCProportionalTermDischarge : 0|8@1- (0.1,0) [-12.8|-12.8] ""  DDU7
+ SG_ PPCProportionalTermRegen : 8|8@1- (0.1,0) [-12.8|-12.8] ""  DDU7
+ SG_ MTorqueDistributionFL : 16|12@1- (0.4,50) [-769.2|-769.2] ""  DDU7
+ SG_ MTorqueDistributionFR : 28|12@1- (0.4,50) [-769.2|-769.2] ""  DDU7
+ SG_ MTorqueDistributionRL : 40|12@1- (0.4,50) [-769.2|-769.2] ""  DDU7
+ SG_ MTorqueDistrbutionRR : 52|12@1- (0.4,50) [-769.2|-769.2] ""  DDU7
+
+BO_ 1044 ETAS_0x414: 8 ETAS
+ SG_ BReadyToDrive : 0|1@1+ (1,0) [0|0] ""  DDU7
+ SG_ MTorqueVectoringFL : 1|12@1- (0.1,30) [-174.8|-174.8] ""  DDU7
+ SG_ MTorqueVectoringFR : 13|12@1- (0.1,30) [-174.8|-174.8] ""  DDU7
+ SG_ MTorqueVectoringRL : 25|12@1- (0.1,30) [-174.8|-174.8] ""  DDU7
+ SG_ MTorqueVectoringRR : 37|12@1- (0.1,30) [-174.8|-174.8] ""  DDU7
+ SG_ MTractionControlFLFinal : 49|12@1- (0.1,30) [-174.8|-174.8] ""  DDU7
+ SG_ BEncoderErrorFront : 61|1@1+ (1,0) [0|0] ""  DDU7
+ SG_ BEncoderErrorRear : 62|1@1+ (1,0) [0|0] ""  DDU7
+
+BO_ 1045 ETAS_0x415: 8 ETAS
+ SG_ NTractionControlKp : 0|2@1+ (1,0) [0|0] ""  DDU7
+ SG_ MTractionControlFRFinal : 2|12@1- (0.1,30) [-174.8|-174.8] ""  DDU7
+ SG_ MTractionControlRLFinal : 14|12@1- (0.1,30) [-174.8|-174.8] ""  DDU7
+ SG_ MTractionControlRRFinal : 26|12@1- (0.1,30) [-174.8|-174.8] ""  DDU7
+ SG_ MRegenRequested : 38|13@1+ (-0.1,0) [-819.1|-819.1] ""  DDU7
+ SG_ MDriverRegenRequested : 51|13@1+ (-0.1,0) [-819.1|-819.1] ""  DDU7
+
+BO_ 1046 ETAS_0x416: 8 ETAS
+ SG_ MSpinningModeFL : 0|9@1+ (0.1,0) [0|0] ""  DDU7
+ SG_ MRegenLimited : 9|13@1+ (-0.1,0) [-819.1|-819.1] ""  DDU7
+ SG_ MTotalRequested : 22|14@1- (0.1,40) [-779.2|-779.2] ""  DDU7
+ SG_ MDriverDischargeRequested : 36|14@1+ (0.1,0) [0|0] ""  DDU7
+ SG_ MDischargeRequested : 50|14@1+ (0.1,0) [0|0] ""  DDU7
+
+BO_ 1047 ETAS_0x417: 8 ETAS
+ SG_ MSpinningModeRR : 0|9@1+ (0.1,0) [0|0] ""  DDU7
+ SG_ MTractionControlRRTotal : 9|12@1- (0.1,30) [-174.8|-174.8] ""  DDU7
+ SG_ MTractionControlRLTotal : 21|12@1- (0.1,30) [-174.8|-174.8] ""  DDU7
+ SG_ MTractionControlFRTotal : 33|12@1- (0.1,30) [-174.8|-174.8] ""  DDU7
+ SG_ MTractionControlFLTotal : 45|12@1- (0.1,30) [-174.8|-174.8] ""  DDU7
+ SG_ NCarState : 57|7@1+ (1,0) [0|0] ""  DDU7
+
+BO_ 1048 ETAS_0x418: 8 ETAS
+ SG_ NABSDTermRL : 0|5@1+ (0.1,-3.1) [-3.1|0] ""  DDU7
+ SG_ NABSDTermRR : 5|5@1+ (0.1,-3.1) [-3.1|0] ""  DDU7
+ SG_ NTractionControlPTermFL : 10|5@1+ (0.1,0) [0|3.1] ""  DDU7
+ SG_ NTractionControlPTermFR : 15|5@1+ (0.1,0) [0|3.1] ""  DDU7
+ SG_ NTractionControlPTermRL : 20|5@1+ (0.1,0) [0|3.1] ""  DDU7
+ SG_ NTractionControlPTermRR : 25|5@1+ (0.1,0) [0|3.1] ""  DDU7
+ SG_ NTractionControlDtermFL : 30|6@1+ (0.01,-0.63) [-0.63|0] ""  DDU7
+ SG_ NTractionControlDtermFR : 36|6@1+ (0.01,-0.63) [-0.63|0] ""  DDU7
+ SG_ NTractionControlDtermRL : 42|6@1+ (0.01,-0.63) [-0.63|0] ""  DDU7
+ SG_ NTractionControlDtermRR : 48|6@1+ (0.01,-0.63) [-0.63|0] ""  DDU7
+ SG_ NABSPTermFL : 54|5@1+ (0.1,-3.1) [-3.1|0] ""  DDU7
+ SG_ NABSPTermFR : 59|5@1+ (0.1,-3.1) [-3.1|0] ""  DDU7
+
+BO_ 1280 PDM_0x500: 8 PDM
+ SG_ VPDM : 0|8@1+ (1,0) [0|255] ""  ETAS
+ SG_ TPDM : 8|8@1+ (1,0) [0|255] ""  ETAS
+ SG_ IPDM : 16|8@1+ (1,0) [0|255] ""  ETAS
+ SG_ NDeviceError : 24|8@1+ (1,0) [0|255] ""  ETAS
+
+BO_ 1281 ETAS_0x501: 8 ETAS
+ SG_ MFRFinal : 0|12@1- (0.1,30) [-134.8|234.7] ""  DDU7
+ SG_ MFLFinal : 12|12@1- (0.1,30) [-134.8|234.7] ""  DDU7
+ SG_ MRLFinal : 24|12@1- (0.1,30) [-134.8|234.7] ""  DDU7
+ SG_ MRRFinal : 36|12@1- (0.1,30) [-134.8|234.7] ""  DDU7
+ SG_ xDamperRL : 48|8@1- (1,0) [-20|50] ""  DDU7
+ SG_ xDamperRR : 56|8@1- (1,0) [-20|50] ""  DDU7
+
+BO_ 1283 ETAS_0x503: 8 ETAS
+ SG_ VDCAccumulatorOut : 0|13@1+ (0.1,0) [0|819.1] ""  DDU7
+ SG_ MPCDischargeRequested : 13|14@1+ (0.1,0) [0|1638.3] ""  DDU7
+ SG_ MPCRegenRequested : 27|13@1+ (0.1,-819.1) [-819.1|0] ""  DDU7
+ SG_ MTotalFinal : 40|14@1- (0.1,50) [-769.2|869.1] ""  DDU7
+ SG_ PRegenRequested : 54|10@1+ (0.1,-100) [-100|2.3] ""  DDU7
+
+BO_ 1305 ETAS_0x519: 8 ETAS
+ SG_ NABSPTermRL : 0|5@1+ (0.1,-3.1) [-3.1|0] ""  DDU7
+ SG_ NABSPTermRR : 5|5@1+ (0.1,-3.1) [-3.1|0] ""  DDU7
+ SG_ NABSDTermFL : 10|5@1+ (0.1,-3.1) [-3.1|0] ""  DDU7
+ SG_ NABSDTermFR : 15|5@1+ (0.1,-3.1) [-3.1|0] ""  DDU7
+ SG_ PRegenDerate : 20|10@1+ (0.1,0) [0|102.3] ""  DDU7
+ SG_ PHighCellTempRegenDerate : 30|10@1+ (0.1,-100) [-100|0] ""  DDU7
+ SG_ PHighCellTempDischargeDerate : 40|10@1+ (0.1,0) [0|102.3] ""  DDU7
+ SG_ BTVOn : 50|1@1+ (1,0) [0|1] ""  DDU7
+ SG_ BTCOn : 51|1@1+ (1,0) [0|1] ""  DDU7
+ SG_ BDrivetrainCoolingOn : 52|1@1+ (1,0) [0|1] ""  DDU7
+
+BO_ 1328 PDM_0x530: 8 PDM
+ SG_ NInvFansStatus : 0|8@1+ (1,0) [0|255] ""  ETAS
+ SG_ NAIRAUXStatus : 8|8@1+ (1,0) [0|255] ""  ETAS
+ SG_ NBrakeLightStatus : 16|8@1+ (1,0) [0|255] ""  ETAS
+ SG_ NConverterStatus : 24|8@1+ (1,0) [0|255] ""  ETAS
+ SG_ NMotorRBHFansStatus : 32|8@1+ (1,0) [0|255] ""  ETAS
+ SG_ NAccuFanStatus : 40|8@1+ (1,0) [0|255] ""  ETAS
+ SG_ NACUStatus : 48|8@1+ (1,0) [0|255] ""  ETAS
+ SG_ NBMSStatus : 56|8@1+ (1,0) [0|255] ""  ETAS
+
+BO_ 1329 PDM_0x531: 8 PDM
+ SG_ NBSPDStatus : 0|8@1+ (1,0) [0|255] ""  ETAS
+ SG_ NDashLHSStatus : 8|8@1+ (1,0) [0|255] ""  ETAS
+ SG_ NDashRHSStatus : 16|8@1+ (1,0) [0|255] ""  ETAS
+ SG_ NDisplayUnitStatus : 24|8@1+ (1,0) [0|255] ""  ETAS
+ SG_ NETASStatus : 32|8@1+ (1,0) [0|255] ""  ETAS
+ SG_ NHVTSALStatus : 40|8@1+ (1,0) [0|255] ""  ETAS
+ SG_ NIMDStatus : 48|8@1+ (1,0) [0|255] ""  ETAS
+ SG_ NIMSStatus : 56|8@1+ (1,0) [0|255] ""  ETAS
+
+BO_ 1330 PDM_0x532: 8 PDM
+ SG_ NIMUStatus : 0|8@1+ (1,0) [0|255] ""  ETAS
+ SG_ NINVStatus : 8|8@1+ (1,0) [0|255] ""  ETAS
+ SG_ NIVTSStatus : 16|8@1+ (1,0) [0|255] ""  ETAS
+ SG_ NRTDStatus : 24|8@1+ (1,0) [0|255] ""  ETAS
+ SG_ NSDCButtonsStatus : 32|8@1+ (1,0) [0|255] ""  ETAS
+ SG_ NSTWStatus : 40|8@1+ (1,0) [0|255] ""  ETAS
+
+BO_ 1536 ETAS_0x600: 8 ETAS
+ SG_ PSOCDischargeDerate : 0|10@1+ (0.1,0) [0|102.3] ""  DDU7
+ SG_ PSOCRegenDerate : 10|10@1+ (-0.1,0) [-102.3|0] ""  DDU7
+ SG_ PMotorTemperatureDerate : 20|10@1+ (0.1,0) [0|102.3] ""  DDU7
+ SG_ PMotorTremperatureDerateFL : 30|10@1+ (0.1,0) [0|102.3] ""  DDU7
+ SG_ PMotorTremperatureDerateFR : 40|10@1+ (0.1,0) [0|102.3] ""  DDU7
+ SG_ PMotorTremperatureDerateRL : 50|10@1+ (0.1,0) [0|102.3] ""  DDU7
+ SG_ rSpeedRegenDerateRR : 60|4@1+ (0.1,0) [0|1.5] ""  DDU7
+
+BO_ 1537 OXTS_0x601: 8 OXTS
+ SG_ aPositionLateralOXTS : 0|32@1- (1E-07,0) [-214.7483648|214.7483647] ""  DDU7
+ SG_ aPositionLongitudinalOXTS : 32|32@1- (1E-07,0) [-214.7483648|214.7483647] ""  DDU7
+
+BO_ 1539 ETAS_0x603: 8 ETAS
+ SG_ BBrakeLight : 0|8@1+ (1,0) [0|255] ""  PDM
+ SG_ BInverterFanOn : 8|8@1+ (1,0) [0|255] ""  PDM
+ SG_ BMotorRBHFanOn : 16|8@1+ (1,0) [0|255] ""  PDM
+ SG_ BAccuFanOn : 24|8@1+ (1,0) [0|255] ""  PDM
+ SG_ BInvLVOn : 32|8@1+ (1,0) [0|255] ""  PDM
+ SG_ BPCComplete : 40|8@1+ (1,0) [0|255] ""  PDM
+ SG_ BReadyToDriveBuzzer : 48|8@1+ (1,0) [0|255] ""  PDM
+
+BO_ 1540 OXTS_0x604: 8 OXTS
+ SG_ vLongitudinalOXTS : 0|16@1- (0.01,0) [-327.68|327.67] ""  DDU7
+ SG_ vLateralOXTS : 16|16@1- (0.01,0) [-327.68|327.67] ""  DDU7
+
+BO_ 1542 OXTS_0x606: 8 OXTS
+ SG_ gLongitudinalOXTS : 0|16@1- (0.01,0) [-327.68|327.67] ""  DDU7
+ SG_ gLateralOXTS : 16|16@1- (0.01,0) [-327.68|327.67] ""  DDU7
+ SG_ gVerticalOXTS : 32|16@1- (0.01,0) [-327.68|327.67] ""  DDU7
+ SG_ gSlipOXTS : 48|16@1- (0.01,0) [-327.68|327.67] ""  DDU7
+
+BO_ 1543 OXTS_0x607: 8 OXTS
+ SG_ aHeadingOXTS : 0|16@1+ (0.01,0) [0|655.35] ""  DDU7
+ SG_ aPitchOXTS : 16|16@1- (0.01,0) [-327.68|327.67] ""  DDU7
+ SG_ aRollOXTS : 32|16@1- (0.01,0) [-327.68|327.67] ""  DDU7
+
+BO_ 1545 OXTS_0x609: 8 OXTS
+ SG_ nRollOXTS : 0|16@1- (0.1,0) [-3276.8|3276.7] ""  DDU7
+ SG_ nPitchOXTS : 16|16@1- (0.1,0) [-3276.8|3276.7] ""  DDU7
+ SG_ nYawRateOXTS : 32|16@1- (0.1,0) [-3276.8|3276.7] ""  DDU7
+
+BO_ 1546 OXTS_0x60A: 8 OXTS
+ SG_ aTrackOXTS : 0|16@1+ (0.01,0) [0|655.35] ""  DDU7
+ SG_ aChassisSlipOXTS : 16|16@1- (0.01,1) [-327.68|327.67] ""  DDU7
+ SG_ cCurvatureOXTS : 32|16@1- (0.0001,0) [-3.2768|3.2767] ""  DDU7
+
+BO_ 1547 OXTS_0x60B: 8 OXTS
+ SG_ sDistanceWithHoldOXTS : 0|32@1+ (0.001,0) [0|4294967.295] ""  DDU7
+ SG_ sDistanceOXTS : 32|32@1+ (0.001,0) [0|4294967.295] ""  DDU7
+
+BO_ 1553 ETAS_0x611: 8 ETAS
+ SG_ PDischarge : 0|7@1+ (1,0) [0|127] ""  DDU7
+ SG_ rSOC : 7|7@1+ (1,0) [0|127] ""  DDU7
+ SG_ NInvState : 14|7@1+ (1,0) [0|127] ""  DDU7
+ SG_ NBMSState : 21|7@1+ (1,0) [0|127] ""  DDU7
+ SG_ PEnergyMeter : 28|7@1+ (1000,0) [0|1270000] ""  DDU7
+ SG_ rSOE : 35|7@1+ (1,0) [0|127] ""  DDU7
+ SG_ PDischargeLimited : 42|10@1+ (0.1,0) [0|102.3] ""  DDU7
+ SG_ sChassis : 52|12@1+ (8,0) [0|32760] ""  DDU7
+
+BO_ 1554 ETAS_0x612: 8 ETAS
+ SG_ BSteeringWheelButton1 : 0|1@1+ (1,0) [0|1] ""  DDU7
+ SG_ BSteeringWheelButton2 : 1|1@1+ (1,0) [0|1] ""  DDU7
+ SG_ BSteeringWheelButton3 : 2|1@1+ (1,0) [0|1] ""  DDU7
+ SG_ BSteeringWheelButton4 : 3|1@1+ (1,0) [0|1] ""  DDU7
+ SG_ NParameterRotary : 4|8@1+ (1,1) [1|16] ""  DDU7
+ SG_ NEventModeRotary : 12|8@1+ (1,1) [1|16] ""  DDU7
+ SG_ NPageSelectRotary : 20|8@1+ (1,1) [1|16] ""  DDU7
+
+BO_ 1555 Tyre_0x613: 8 Tyre
+ SG_ TTireTempFL1 : 0|9@1- (1,-20) [-20|300] "C"  DDU7
+ SG_ TTireTempFL2 : 9|9@1- (1,-20) [-20|300] "C"  DDU7
+ SG_ TTireTempFL3 : 18|9@1- (1,-20) [-20|300] "C"  DDU7
+ SG_ TTireTempFL4 : 27|9@1- (1,-20) [-20|300] "C"  DDU7
+
+BO_ 1556 Tyre_0x614: 8 Tyre
+ SG_ TTireTempFL5 : 0|9@1- (1,-20) [-20|300] "C"  DDU7
+ SG_ TTireTempFL6 : 9|9@1- (1,-20) [-20|300] "C"  DDU7
+ SG_ TTireTempFL7 : 18|9@1- (1,-20) [-20|300] "C"  DDU7
+ SG_ TTireTempFL8 : 27|9@1- (1,-20) [-20|300] "C"  DDU7
+
+BO_ 1557 Tyre_0x615: 8 Tyre
+ SG_ TTireTempFR1 : 0|9@1- (1,-20) [-20|300] "C"  DDU7
+ SG_ TTireTempFR2 : 9|9@1- (1,-20) [-20|300] "C"  DDU7
+ SG_ TTireTempFR3 : 18|9@1- (1,-20) [-20|300] "C"  DDU7
+ SG_ TTireTempFR4 : 27|9@1- (1,-20) [-20|300] "C"  DDU7
+
+BO_ 1558 Tyre_0x616: 8 Tyre
+ SG_ TTireTempFR5 : 0|9@1- (1,-20) [-20|300] "C"  DDU7
+ SG_ TTireTempFR6 : 9|9@1- (1,-20) [-20|300] "C"  DDU7
+ SG_ TTireTempFR7 : 18|9@1- (1,-20) [-20|300] "C"  DDU7
+ SG_ TTireTempFR8 : 27|9@1- (1,-20) [-20|300] "C"  DDU7
+
+BO_ 1793 ETAS_0x701: 8 ETAS
+ SG_ Multiplexer_Switch_1 M : 0|1@1+ (1,0) [0|1] ""  DDU7
+ SG_ FTyreVerticalFL m0 : 1|15@1+ (0.1,0) [0|3276.7] ""  DDU7
+ SG_ FTyreVerticalRL m1 : 1|15@1+ (0.1,0) [0|3276.7] ""  DDU7
+ SG_ FTyreVerticalFR m0 : 16|15@1+ (0.1,0) [0|3276.7] ""  DDU7
+ SG_ FTyreVerticalRR m1 : 16|15@1+ (0.1,0) [0|3276.7] ""  DDU7
+ SG_ FFrontLateralLoadTransfer m0 : 31|15@1- (0.1,0) [-1638.4|1638.3] ""  DDU7
+ SG_ FRearLateralLoadTransfer m1 : 31|15@1- (0.1,0) [-1638.4|1638.3] ""  DDU7
+ SG_ xHeaveTravelFront m0 : 46|16@1- (0.001,0) [-32.768|32.767] ""  DDU7
+ SG_ xHeaveTravelRear m1 : 46|16@1- (0.001,0) [-32.768|32.767] ""  DDU7
+
+BO_ 1794 ETAS_0x702: 8 ETAS
+ SG_ Multiplexer_Switch_2 M : 0|1@1+ (1,0) [0|1] ""  DDU7
+ SG_ FFrontDownforce m0 : 1|15@1+ (0.1,0) [0|3276.7] ""  DDU7
+ SG_ aCamberGainHeaveFront m1 : 1|11@1- (0.03,0) [-30.72|30.69] ""  DDU7
+ SG_ aCamberGainHeaveRear m1 : 12|11@1- (0.03,0) [-30.72|30.69] ""  DDU7
+ SG_ FRearDownforce m0 : 16|15@1+ (0.1,0) [0|3276.7] ""  DDU7
+ SG_ aCamberGainRollFront m1 : 23|9@1- (0.1,0) [-25.6|25.5] ""  DDU7
+ SG_ FTotalDownforce m0 : 31|15@1+ (0.1,0) [0|3276.7] ""  DDU7
+ SG_ aCamberGainRollRear m1 : 32|9@1- (0.1,0) [-25.6|25.5] ""  DDU7
+ SG_ aRollAngle m1 : 41|7@1- (0.1,0) [-6.4|6.3] ""  DDU7
+ SG_ FLongitudinalLoadTransfer m0 : 46|16@1- (0.1,0) [-3276.8|3276.7] ""  DDU7
+ SG_ FTotalLateralLoadTransfer m1 : 48|15@1- (0.1,0) [-1638.4|1638.3] ""  DDU7
+
+BO_ 1795 ETAS_0x703: 8 ETAS
+ SG_ Multiplexer_Switch_3 M : 0|1@1+ (1,0) [0|1] ""  DDU7
+ SG_ aSlipAngleFL m0 : 1|9@1- (0.1,0) [-25.6|25.5] ""  DDU7
+ SG_ aCamberFL m1 : 1|9@1- (0.1,0) [-25.6|25.5] ""  DDU7
+ SG_ aSlipAngleFR m0 : 10|9@1- (0.1,0) [-25.6|25.5] ""  DDU7
+ SG_ aCamberFR m1 : 10|9@1- (0.1,0) [-25.6|25.5] ""  DDU7
+ SG_ aSlipAngleRL m0 : 19|9@1- (0.1,0) [-25.6|25.5] ""  DDU7
+ SG_ aCamberRL m1 : 19|9@1- (0.1,0) [-25.6|25.5] ""  DDU7
+ SG_ aSlipAngleRR m0 : 28|9@1- (0.1,0) [-25.6|25.5] ""  DDU7
+ SG_ aCamberRR m1 : 28|9@1- (0.1,0) [-25.6|25.5] ""  DDU7
+ SG_ aCamberGainSteerFL m0 : 37|7@1- (0.1,0) [-6.4|6.3] ""  DDU7
+ SG_ aCamberGainSteerFR m1 : 37|7@1- (0.1,0) [-6.4|6.3] ""  DDU7
+
+BO_ 2017 ETAS_0x7E1: 8 ETAS
+ SG_ NInvDTCRR : 0|12@1- (1,0) [0|4095] ""  DDU7
+ SG_ NInvDTCRL : 12|12@1- (1,0) [0|4095] ""  DDU7
+ SG_ NInvDTCFR : 24|12@1- (1,0) [0|4095] ""  DDU7
+ SG_ NInvDTCFL : 36|12@1- (1,0) [0|4095] ""  DDU7
+ SG_ IIVTS : 48|12@1+ (0.1,0) [-200|200] "A"  DDU7
+ SG_ rGrip : 60|4@1- (0.1,0) [0|1.5] ""  DDU7
+
+BO_ 2018 ETAS_0x7E2: 8 ETAS
+ SG_ TMotorFR : 0|8@1- (1,0) [0|255] "C"  DDU7
+ SG_ TMotorFL : 8|8@1- (1,0) [0|255] "C"  DDU7
+ SG_ TMotorRR : 16|8@1- (1,0) [0|255] "C"  DDU7
+ SG_ TMotorRL : 24|8@1- (1,0) [0|255] "C"  DDU7
+ SG_ VCellMin : 32|9@1- (0.01,0) [0|5.11] "V"  DDU7
+ SG_ VCellMax : 41|9@1- (0.01,0) [0|5.11] "V"  DDU7
+ SG_ TInvFR : 50|7@1- (1,0) [0|127] "C"  DDU7
+ SG_ TInvFL : 57|7@1- (1,0) [0|127] "C"  DDU7
+
+BO_ 2020 ETAS_0x7E4: 8 ETAS
+ SG_ BDamperOk : 0|1@1+ (1,0) [0|1] ""  DDU7
+ SG_ BDamperOkFL : 1|1@1+ (1,0) [0|1] ""  DDU7
+ SG_ BDamperOkFR : 2|1@1+ (1,0) [0|1] ""  DDU7
+ SG_ BDamperOkRL : 3|1@1+ (1,0) [0|1] ""  DDU7
+ SG_ BDamperOkRR : 4|1@1+ (1,0) [0|1] ""  DDU7
+ SG_ BDataMark : 5|1@1+ (1,0) [0|1] ""  DDU7
+ SG_ NLap : 6|7@1+ (1,0) [0|127] ""  DDU7
+ SG_ BErrorReset : 13|1@1+ (1,0) [0|1] ""  DDU7
+ SG_ BDischargeAllowed : 14|1@1+ (1,0) [0|1] ""  DDU7
+ SG_ NEventMode : 15|3@1+ (1,1) [1|8] ""  DDU7
+ SG_ BCalibrationOn : 18|1@1+ (1,0) [0|1] ""  DDU7
+ SG_ NPCKpSelectorDischarge : 19|3@1+ (1,1) [1|8] ""  DDU7
+ SG_ NPCKpSelectorRegen : 22|3@1+ (1,1) [1|8] ""  DDU7
+ SG_ rSpeedRegenDerate : 25|4@1+ (0.1,0) [0|1.5] ""  DDU7
+ SG_ BSpeedDerateOn : 29|1@1+ (1,0) [0|1] ""  DDU7
+ SG_ sChassisSectorStart : 30|12@1+ (8,0) [0|32760] ""  DDU7
+ SG_ EBudget : 42|7@1+ (0.01,0) [0|1] ""  DDU7
+ SG_ ERemaining : 49|7@1+ (0.01,0) [0|1] ""  DDU7
+ SG_ ESector : 56|7@1+ (0.01,0) [0|1] ""  DDU7
+
+BO_ 2039 ETAS_0x7F7: 8 ETAS
+ SG_ PMotorTremperatureDerateRR : 0|10@1+ (0.1,0) [0|102.3] ""  DDU7
+ SG_ PLowCellVoltageDischargeDerate : 10|10@1+ (0.1,0) [0|102.3] ""  DDU7
+ SG_ rSpeedDerate : 20|10@1+ (0.1,0) [0|1] ""  DDU7
+ SG_ PInvTemperatureDerate : 30|10@1+ (0.1,0) [0|102.3] ""  DDU7
+ SG_ PInvTemperatureDerateFL : 40|10@1+ (0.1,0) [0|102.3] ""  DDU7
+ SG_ PInvTemperatureDerateFR : 50|10@1+ (0.1,0) [0|102.3] ""  DDU7
+ SG_ rSpeedRegenDerateRL : 60|4@1+ (0.1,0) [0|1.5] ""  DDU7
+
+BO_ 2040 ETAS_0x7F8: 8 ETAS
+ SG_ PInvTemperatureDerateRL : 0|10@1+ (0.1,0) [0|102.3] ""  DDU7
+ SG_ PInvTemperatureDerateRR : 10|10@1+ (0.1,0) [0|102.3] ""  DDU7
+ SG_ PTSTemperatureDerateFL : 20|10@1+ (0.1,0) [0|102.3] ""  DDU7
+ SG_ PTSTemperatureDerateFR : 30|10@1+ (0.1,0) [0|102.3] ""  DDU7
+ SG_ PTSTemperatureDerateRL : 40|10@1+ (0.1,0) [0|102.3] ""  DDU7
+ SG_ PTSTemperatureDerateRR : 50|10@1+ (0.1,0) [0|102.3] ""  DDU7
+ SG_ rSpeedRegenDerateFR : 60|4@1+ (0.1,0) [0|1.5] ""  DDU7
+
+
+
+CM_ BO_ 3221225472 "This is a message for not used signals, created by Vector CANdb++ DBC OLE DB Provider.";
+BA_DEF_ BO_  "GenMsgCycleTime" INT 0 65535;
+BA_DEF_ BO_  "VFrameFormat" STRING ;
+BA_DEF_DEF_  "GenMsgCycleTime" 0;
+BA_DEF_DEF_  "VFrameFormat" "";
+BA_ "VFrameFormat" BO_ 257 "StandardCAN";
+BA_ "GenMsgCycleTime" BO_ 257 1;
+BA_ "VFrameFormat" BO_ 258 "StandardCAN";
+BA_ "GenMsgCycleTime" BO_ 258 1;
+BA_ "VFrameFormat" BO_ 259 "StandardCAN";
+BA_ "GenMsgCycleTime" BO_ 259 1;
+BA_ "VFrameFormat" BO_ 260 "StandardCAN";
+BA_ "GenMsgCycleTime" BO_ 260 5;
+BA_ "VFrameFormat" BO_ 261 "StandardCAN";
+BA_ "GenMsgCycleTime" BO_ 261 10;
+BA_ "VFrameFormat" BO_ 800 "StandardCAN";
+BA_ "GenMsgCycleTime" BO_ 800 5;
+BA_ "VFrameFormat" BO_ 1029 "StandardCAN";
+BA_ "GenMsgCycleTime" BO_ 1029 5;
+BA_ "VFrameFormat" BO_ 1030 "StandardCAN";
+BA_ "GenMsgCycleTime" BO_ 1030 5;
+BA_ "VFrameFormat" BO_ 1031 "StandardCAN";
+BA_ "GenMsgCycleTime" BO_ 1031 100;
+BA_ "VFrameFormat" BO_ 1032 "StandardCAN";
+BA_ "GenMsgCycleTime" BO_ 1032 100;
+BA_ "VFrameFormat" BO_ 1033 "StandardCAN";
+BA_ "GenMsgCycleTime" BO_ 1033 100;
+BA_ "VFrameFormat" BO_ 1040 "StandardCAN";
+BA_ "GenMsgCycleTime" BO_ 1040 20;
+BA_ "VFrameFormat" BO_ 1042 "StandardCAN";
+BA_ "GenMsgCycleTime" BO_ 1042 20;
+BA_ "VFrameFormat" BO_ 1043 "StandardCAN";
+BA_ "GenMsgCycleTime" BO_ 1043 20;
+BA_ "VFrameFormat" BO_ 1044 "StandardCAN";
+BA_ "GenMsgCycleTime" BO_ 1044 20;
+BA_ "VFrameFormat" BO_ 1045 "StandardCAN";
+BA_ "GenMsgCycleTime" BO_ 1045 20;
+BA_ "VFrameFormat" BO_ 1046 "StandardCAN";
+BA_ "GenMsgCycleTime" BO_ 1046 20;
+BA_ "VFrameFormat" BO_ 1047 "StandardCAN";
+BA_ "GenMsgCycleTime" BO_ 1047 20;
+BA_ "VFrameFormat" BO_ 1048 "StandardCAN";
+BA_ "GenMsgCycleTime" BO_ 1048 50;
+BA_ "VFrameFormat" BO_ 1280 "StandardCAN";
+BA_ "GenMsgCycleTime" BO_ 1280 50;
+BA_ "VFrameFormat" BO_ 1281 "StandardCAN";
+BA_ "GenMsgCycleTime" BO_ 1281 5;
+BA_ "VFrameFormat" BO_ 1283 "StandardCAN";
+BA_ "GenMsgCycleTime" BO_ 1283 5;
+BA_ "VFrameFormat" BO_ 1305 "StandardCAN";
+BA_ "GenMsgCycleTime" BO_ 1305 50;
+BA_ "VFrameFormat" BO_ 1328 "StandardCAN";
+BA_ "GenMsgCycleTime" BO_ 1328 50;
+BA_ "VFrameFormat" BO_ 1329 "StandardCAN";
+BA_ "GenMsgCycleTime" BO_ 1329 50;
+BA_ "VFrameFormat" BO_ 1330 "StandardCAN";
+BA_ "GenMsgCycleTime" BO_ 1330 50;
+BA_ "VFrameFormat" BO_ 1536 "StandardCAN";
+BA_ "GenMsgCycleTime" BO_ 1536 100;
+BA_ "VFrameFormat" BO_ 1537 "StandardCAN";
+BA_ "GenMsgCycleTime" BO_ 1537 10;
+BA_ "VFrameFormat" BO_ 1539 "StandardCAN";
+BA_ "GenMsgCycleTime" BO_ 1539 100;
+BA_ "VFrameFormat" BO_ 1540 "StandardCAN";
+BA_ "GenMsgCycleTime" BO_ 1540 10;
+BA_ "VFrameFormat" BO_ 1542 "StandardCAN";
+BA_ "GenMsgCycleTime" BO_ 1542 10;
+BA_ "VFrameFormat" BO_ 1543 "StandardCAN";
+BA_ "GenMsgCycleTime" BO_ 1543 10;
+BA_ "VFrameFormat" BO_ 1545 "StandardCAN";
+BA_ "GenMsgCycleTime" BO_ 1545 10;
+BA_ "VFrameFormat" BO_ 1546 "StandardCAN";
+BA_ "GenMsgCycleTime" BO_ 1546 10;
+BA_ "VFrameFormat" BO_ 1547 "StandardCAN";
+BA_ "GenMsgCycleTime" BO_ 1547 10;
+BA_ "VFrameFormat" BO_ 1553 "StandardCAN";
+BA_ "GenMsgCycleTime" BO_ 1553 100;
+BA_ "VFrameFormat" BO_ 1554 "StandardCAN";
+BA_ "GenMsgCycleTime" BO_ 1554 100;
+BA_ "VFrameFormat" BO_ 1555 "StandardCAN";
+BA_ "GenMsgCycleTime" BO_ 1555 100;
+BA_ "VFrameFormat" BO_ 1556 "StandardCAN";
+BA_ "GenMsgCycleTime" BO_ 1556 100;
+BA_ "VFrameFormat" BO_ 1557 "StandardCAN";
+BA_ "GenMsgCycleTime" BO_ 1557 100;
+BA_ "VFrameFormat" BO_ 1558 "StandardCAN";
+BA_ "GenMsgCycleTime" BO_ 1558 100;
+BA_ "VFrameFormat" BO_ 1793 "StandardCAN";
+BA_ "GenMsgCycleTime" BO_ 1793 5;
+BA_ "VFrameFormat" BO_ 1794 "StandardCAN";
+BA_ "GenMsgCycleTime" BO_ 1794 5;
+BA_ "VFrameFormat" BO_ 1795 "StandardCAN";
+BA_ "GenMsgCycleTime" BO_ 1795 5;
+BA_ "VFrameFormat" BO_ 2017 "StandardCAN";
+BA_ "GenMsgCycleTime" BO_ 2017 100;
+BA_ "VFrameFormat" BO_ 2018 "StandardCAN";
+BA_ "GenMsgCycleTime" BO_ 2018 100;
+BA_ "VFrameFormat" BO_ 2020 "StandardCAN";
+BA_ "GenMsgCycleTime" BO_ 2020 100;
+BA_ "VFrameFormat" BO_ 2039 "StandardCAN";
+BA_ "GenMsgCycleTime" BO_ 2039 100;
+BA_ "VFrameFormat" BO_ 2040 "StandardCAN";
+BA_ "GenMsgCycleTime" BO_ 2040 100;
+
