@@ -106,7 +106,7 @@ void MX_ADC1_Init(void)
   ADC_InitStruct.LowPowerMode = LL_ADC_LP_MODE_NONE;
   ADC_InitStruct.LeftBitShift = LL_ADC_LEFT_BIT_SHIFT_NONE;
   LL_ADC_Init(ADC1, &ADC_InitStruct);
-  ADC_REG_InitStruct.TriggerSource = LL_ADC_REG_TRIG_SOFTWARE;
+  ADC_REG_InitStruct.TriggerSource = LL_ADC_REG_TRIG_EXT_TIM2_TRGO;
   ADC_REG_InitStruct.SequencerLength = LL_ADC_REG_SEQ_SCAN_ENABLE_7RANKS;
   ADC_REG_InitStruct.SequencerDiscont = DISABLE;
   ADC_REG_InitStruct.ContinuousMode = LL_ADC_REG_CONV_SINGLE;
@@ -116,6 +116,7 @@ void MX_ADC1_Init(void)
   ADC_CommonInitStruct.CommonClock = LL_ADC_CLOCK_ASYNC_DIV1;
   ADC_CommonInitStruct.Multimode = LL_ADC_MULTI_INDEPENDENT;
   LL_ADC_CommonInit(__LL_ADC_COMMON_INSTANCE(ADC1), &ADC_CommonInitStruct);
+  LL_ADC_REG_SetTriggerEdge(ADC1, LL_ADC_REG_TRIG_EXT_RISING);
 
   /* Disable ADC deep power down (enabled by default after reset state) */
   LL_ADC_DisableDeepPowerDown(ADC1);
@@ -160,21 +161,21 @@ void MX_ADC1_Init(void)
 
   /** Configure Regular Channel
   */
-  LL_ADC_REG_SetSequencerRanks(ADC1, LL_ADC_REG_RANK_5, LL_ADC_CHANNEL_11);
-  LL_ADC_SetChannelSamplingTime(ADC1, LL_ADC_CHANNEL_11, LL_ADC_SAMPLINGTIME_64CYCLES_5);
-  LL_ADC_SetChannelSingleDiff(ADC1, LL_ADC_CHANNEL_11, LL_ADC_SINGLE_ENDED);
-
-  /** Configure Regular Channel
-  */
-  LL_ADC_REG_SetSequencerRanks(ADC1, LL_ADC_REG_RANK_6, LL_ADC_CHANNEL_15);
+  LL_ADC_REG_SetSequencerRanks(ADC1, LL_ADC_REG_RANK_5, LL_ADC_CHANNEL_15);
   LL_ADC_SetChannelSamplingTime(ADC1, LL_ADC_CHANNEL_15, LL_ADC_SAMPLINGTIME_64CYCLES_5);
   LL_ADC_SetChannelSingleDiff(ADC1, LL_ADC_CHANNEL_15, LL_ADC_SINGLE_ENDED);
 
   /** Configure Regular Channel
   */
-  LL_ADC_REG_SetSequencerRanks(ADC1, LL_ADC_REG_RANK_7, LL_ADC_CHANNEL_18);
+  LL_ADC_REG_SetSequencerRanks(ADC1, LL_ADC_REG_RANK_6, LL_ADC_CHANNEL_18);
   LL_ADC_SetChannelSamplingTime(ADC1, LL_ADC_CHANNEL_18, LL_ADC_SAMPLINGTIME_64CYCLES_5);
   LL_ADC_SetChannelSingleDiff(ADC1, LL_ADC_CHANNEL_18, LL_ADC_SINGLE_ENDED);
+
+  /** Configure Regular Channel
+  */
+  LL_ADC_REG_SetSequencerRanks(ADC1, LL_ADC_REG_RANK_7, LL_ADC_CHANNEL_11);
+  LL_ADC_SetChannelSamplingTime(ADC1, LL_ADC_CHANNEL_11, LL_ADC_SAMPLINGTIME_64CYCLES_5);
+  LL_ADC_SetChannelSingleDiff(ADC1, LL_ADC_CHANNEL_11, LL_ADC_SINGLE_ENDED);
   /* USER CODE BEGIN ADC1_Init 2 */
 
   /* USER CODE END ADC1_Init 2 */
