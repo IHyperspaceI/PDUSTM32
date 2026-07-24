@@ -7,9 +7,9 @@
  *
  * Code generated for Simulink model 'PDUSTM32'.
  *
- * Model version                  : 13.172
+ * Model version                  : 13.176
  * Simulink Coder version         : 24.2 (R2024b) 21-Jun-2024
- * C/C++ source code generated on : Fri Jul 24 00:25:56 2026
+ * C/C++ source code generated on : Fri Jul 24 22:58:52 2026
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: ARM Compatible->ARM Cortex-M
@@ -62,16 +62,10 @@ typedef struct {
   uint16_T count;                      /* '<S7>/MATLAB Function' */
 } DW_MATLABFunction_PDUSTM32_c_T;
 
-/* Block states (default storage) for system '<S7>/SPI Controller Transfer' */
+/* Block states (default storage) for system '<S34>/SPI Controller Transfer1' */
 typedef struct {
-  stm32cube_blocks_SPIControlle_T obj; /* '<S7>/SPI Controller Transfer' */
-  boolean_T objisempty;                /* '<S7>/SPI Controller Transfer' */
-} DW_SPIControllerTransfer_PD_f_T;
-
-/* Block states (default storage) for system '<S31>/SPI Controller Transfer1' */
-typedef struct {
-  stm32cube_blocks_SPIControlle_T obj; /* '<S31>/SPI Controller Transfer1' */
-  boolean_T objisempty;                /* '<S31>/SPI Controller Transfer1' */
+  stm32cube_blocks_SPIControlle_T obj; /* '<S34>/SPI Controller Transfer1' */
+  boolean_T objisempty;                /* '<S34>/SPI Controller Transfer1' */
 } DW_SPIControllerTransfer1_PDU_T;
 
 /* Block signals (default storage) */
@@ -109,7 +103,7 @@ typedef struct {
   real_T Voltage_k;                    /* '<S2>/MATLAB Function' */
   real_T Voltage_a;                    /* '<S1>/MATLAB Function' */
   real32_T Gain4[7];                   /* '<Root>/Gain4' */
-  boolean_T OutportBufferForMCPInitialized;/* '<S30>/Constant' */
+  boolean_T OutportBufferForMCPInitialized;/* '<S33>/Constant' */
   boolean_T CANUnpack_o1;              /* '<S6>/CAN Unpack' */
   boolean_T CANUnpack_o2;              /* '<S6>/CAN Unpack' */
   boolean_T CANUnpack_o3;              /* '<S6>/CAN Unpack' */
@@ -124,15 +118,17 @@ typedef struct {
 
 /* Block states (default storage) for system '<Root>' */
 typedef struct {
-  stm32cube_blocks_SPIControlle_T obj; /* '<S31>/SPI Controller Transfer' */
+  stm32cube_blocks_SPIControlle_T obj; /* '<S34>/SPI Controller Transfer4' */
+  stm32cube_blocks_SPIControlle_T obj_d;/* '<S34>/SPI Controller Transfer' */
   stm32cube_blocks_SPIControlle_T obj_e;/* '<Root>/SPI Controller Transfer3' */
+  stm32cube_blocks_SPIControlle_T obj_j;/* '<S7>/SPI Controller Transfer' */
   stm32cube_blocks_SPIControlle_T obj_e2;/* '<S4>/SPI Controller Transfer1' */
   stm32cube_blocks_SPIControlle_T obj_o;/* '<S3>/SPI Controller Transfer1' */
-  stm32cube_blocks_SPIControlle_T obj_d;/* '<S2>/SPI Controller Transfer1' */
+  stm32cube_blocks_SPIControlle_T obj_d3;/* '<S2>/SPI Controller Transfer1' */
   stm32cube_blocks_SPIControlle_T obj_l;/* '<S1>/SPI Controller Transfer1' */
-  stm32cube_blocks_AnalogInputF_T obj_n;/* '<S19>/Analog to Digital Converter' */
-  real_T UnitDelay_DSTATE;             /* '<S10>/Unit Delay' */
-  real_T DelayInput1_DSTATE;           /* '<S29>/Delay Input1' */
+  stm32cube_blocks_AnalogInputF_T obj_n;/* '<S20>/Analog to Digital Converter' */
+  real_T UnitDelay_DSTATE;             /* '<S11>/Unit Delay' */
+  real_T DelayInput1_DSTATE;           /* '<S32>/Delay Input1' */
   int_T CANPack1_ModeSignalID;         /* '<S7>/CAN Pack1' */
   int_T CANPack2_ModeSignalID;         /* '<S7>/CAN Pack2' */
   int_T CANPack3_ModeSignalID;         /* '<S7>/CAN Pack3' */
@@ -141,13 +137,9 @@ typedef struct {
   int_T CANUnpack1_ModeSignalID;       /* '<S6>/CAN Unpack1' */
   int_T CANUnpack1_StatusPortID;       /* '<S6>/CAN Unpack1' */
   boolean_T UnitDelay_DSTATE_j;        /* '<Root>/Unit Delay' */
-  DW_SPIControllerTransfer1_PDU_T SPIControllerTransfer4_p;/* '<S31>/SPI Controller Transfer1' */
-  DW_SPIControllerTransfer1_PDU_T SPIControllerTransfer3_p;/* '<S31>/SPI Controller Transfer1' */
-  DW_SPIControllerTransfer1_PDU_T SPIControllerTransfer2_p;/* '<S31>/SPI Controller Transfer1' */
-  DW_SPIControllerTransfer1_PDU_T SPIControllerTransfer1_pnaev;/* '<S31>/SPI Controller Transfer1' */
-  DW_SPIControllerTransfer_PD_f_T SPIControllerTransfer4;/* '<S7>/SPI Controller Transfer' */
-  DW_SPIControllerTransfer_PD_f_T SPIControllerTransfer2;/* '<S7>/SPI Controller Transfer' */
-  DW_SPIControllerTransfer_PD_f_T SPIControllerTransfer;/* '<S7>/SPI Controller Transfer' */
+  DW_SPIControllerTransfer1_PDU_T SPIControllerTransfer3_p;/* '<S34>/SPI Controller Transfer1' */
+  DW_SPIControllerTransfer1_PDU_T SPIControllerTransfer2;/* '<S34>/SPI Controller Transfer1' */
+  DW_SPIControllerTransfer1_PDU_T SPIControllerTransfer1_pnaev;/* '<S34>/SPI Controller Transfer1' */
   DW_MATLABFunction_PDUSTM32_c_T sf_MATLABFunction2;/* '<S7>/MATLAB Function2' */
   DW_MATLABFunction_PDUSTM32_c_T sf_MATLABFunction1;/* '<S7>/MATLAB Function1' */
   DW_MATLABFunction_PDUSTM32_c_T sf_MATLABFunction_o;/* '<S7>/MATLAB Function' */
@@ -157,7 +149,7 @@ typedef struct {
 
 /* Invariant block signals (default storage) */
 typedef struct {
-  const boolean_T Constant;            /* '<S30>/Constant' */
+  const boolean_T Constant;            /* '<S33>/Constant' */
 } ConstB_PDUSTM32_T;
 
 /* Constant parameters (default storage) */
@@ -170,27 +162,27 @@ typedef struct {
   uint8_T pooled6[14];
 
   /* Expression: 0xc0
-   * Referenced by: '<S31>/Enter Configuration Mode'
+   * Referenced by: '<S34>/Enter Configuration Mode'
    */
   uint8_T EnterConfigurationMode_Value;
 
   /* Expression: [0x02, 0x2A, 0xC0]
-   * Referenced by: '<S31>/CNF1'
+   * Referenced by: '<S34>/CNF1'
    */
   uint8_T CNF1_Value[3];
 
   /* Expression: [0x02, 0x29, 0x99]
-   * Referenced by: '<S31>/CNF2'
+   * Referenced by: '<S34>/CNF2'
    */
   uint8_T CNF2_Value[3];
 
   /* Expression: [0x02, 0x28, 0x02]
-   * Referenced by: '<S31>/CNF3'
+   * Referenced by: '<S34>/CNF3'
    */
   uint8_T CNF3_Value[3];
 
   /* Expression: [0x02, 0x0F, 0x00]
-   * Referenced by: '<S31>/ 000: normal mode, 0: don't abort pending transmit buffers, 0: one-shot disabled, 0: CLKOUT disabled, 00: sysclk//1 | 0000 0000 | 0x00'
+   * Referenced by: '<S34>/ 000: normal mode, 0: don't abort pending transmit buffers, 0: one-shot disabled, 0: CLKOUT disabled, 00: sysclk//1 | 0000 0000 | 0x00'
    */
   uint8_T u00normalmode0dontabortpendingt[3];
 
@@ -273,34 +265,37 @@ extern volatile boolean_T runModel;
  * '<S7>'   : 'PDUSTM32/CAN Tx'
  * '<S8>'   : 'PDUSTM32/Digital Port Read1'
  * '<S9>'   : 'PDUSTM32/Digital Port Write'
- * '<S10>'  : 'PDUSTM32/Subsystem1'
- * '<S11>'  : 'PDUSTM32/Switches1'
- * '<S12>'  : 'PDUSTM32/Switches2'
- * '<S13>'  : 'PDUSTM32/Switches3'
- * '<S14>'  : 'PDUSTM32/ADC121S021 1/MATLAB Function'
- * '<S15>'  : 'PDUSTM32/ADC121S021 2/MATLAB Function'
- * '<S16>'  : 'PDUSTM32/ADC121S021 3/MATLAB Function'
- * '<S17>'  : 'PDUSTM32/ADC121S021 4/MATLAB Function'
- * '<S18>'  : 'PDUSTM32/Analog to Digital Converter/ECSoC'
- * '<S19>'  : 'PDUSTM32/Analog to Digital Converter/ECSoC/ECSimCodegen'
- * '<S20>'  : 'PDUSTM32/CAN Rx/MATLAB Function'
- * '<S21>'  : 'PDUSTM32/CAN Rx/MATLAB Function1'
- * '<S22>'  : 'PDUSTM32/CAN Tx/MATLAB Function'
- * '<S23>'  : 'PDUSTM32/CAN Tx/MATLAB Function1'
- * '<S24>'  : 'PDUSTM32/CAN Tx/MATLAB Function2'
- * '<S25>'  : 'PDUSTM32/Digital Port Read1/ECSoC'
- * '<S26>'  : 'PDUSTM32/Digital Port Read1/ECSoC/ECSimCodegen'
- * '<S27>'  : 'PDUSTM32/Digital Port Write/ECSoC'
- * '<S28>'  : 'PDUSTM32/Digital Port Write/ECSoC/ECSimCodegen'
- * '<S29>'  : 'PDUSTM32/Subsystem1/Detect Increase'
- * '<S30>'  : 'PDUSTM32/Subsystem1/Initialize'
- * '<S31>'  : 'PDUSTM32/Subsystem1/MCPInit'
- * '<S32>'  : 'PDUSTM32/Switches1/ECSoC'
- * '<S33>'  : 'PDUSTM32/Switches1/ECSoC/ECSimCodegen'
- * '<S34>'  : 'PDUSTM32/Switches2/ECSoC'
- * '<S35>'  : 'PDUSTM32/Switches2/ECSoC/ECSimCodegen'
- * '<S36>'  : 'PDUSTM32/Switches3/ECSoC'
- * '<S37>'  : 'PDUSTM32/Switches3/ECSoC/ECSimCodegen'
+ * '<S10>'  : 'PDUSTM32/Digital Port Write1'
+ * '<S11>'  : 'PDUSTM32/Subsystem1'
+ * '<S12>'  : 'PDUSTM32/Switches1'
+ * '<S13>'  : 'PDUSTM32/Switches2'
+ * '<S14>'  : 'PDUSTM32/Switches3'
+ * '<S15>'  : 'PDUSTM32/ADC121S021 1/MATLAB Function'
+ * '<S16>'  : 'PDUSTM32/ADC121S021 2/MATLAB Function'
+ * '<S17>'  : 'PDUSTM32/ADC121S021 3/MATLAB Function'
+ * '<S18>'  : 'PDUSTM32/ADC121S021 4/MATLAB Function'
+ * '<S19>'  : 'PDUSTM32/Analog to Digital Converter/ECSoC'
+ * '<S20>'  : 'PDUSTM32/Analog to Digital Converter/ECSoC/ECSimCodegen'
+ * '<S21>'  : 'PDUSTM32/CAN Rx/MATLAB Function'
+ * '<S22>'  : 'PDUSTM32/CAN Rx/MATLAB Function1'
+ * '<S23>'  : 'PDUSTM32/CAN Tx/MATLAB Function'
+ * '<S24>'  : 'PDUSTM32/CAN Tx/MATLAB Function1'
+ * '<S25>'  : 'PDUSTM32/CAN Tx/MATLAB Function2'
+ * '<S26>'  : 'PDUSTM32/Digital Port Read1/ECSoC'
+ * '<S27>'  : 'PDUSTM32/Digital Port Read1/ECSoC/ECSimCodegen'
+ * '<S28>'  : 'PDUSTM32/Digital Port Write/ECSoC'
+ * '<S29>'  : 'PDUSTM32/Digital Port Write/ECSoC/ECSimCodegen'
+ * '<S30>'  : 'PDUSTM32/Digital Port Write1/ECSoC'
+ * '<S31>'  : 'PDUSTM32/Digital Port Write1/ECSoC/ECSimCodegen'
+ * '<S32>'  : 'PDUSTM32/Subsystem1/Detect Increase'
+ * '<S33>'  : 'PDUSTM32/Subsystem1/Initialize'
+ * '<S34>'  : 'PDUSTM32/Subsystem1/MCPInit'
+ * '<S35>'  : 'PDUSTM32/Switches1/ECSoC'
+ * '<S36>'  : 'PDUSTM32/Switches1/ECSoC/ECSimCodegen'
+ * '<S37>'  : 'PDUSTM32/Switches2/ECSoC'
+ * '<S38>'  : 'PDUSTM32/Switches2/ECSoC/ECSimCodegen'
+ * '<S39>'  : 'PDUSTM32/Switches3/ECSoC'
+ * '<S40>'  : 'PDUSTM32/Switches3/ECSoC/ECSimCodegen'
  */
 #endif                                 /* PDUSTM32_h_ */
 

@@ -7,9 +7,9 @@
  *
  * Code generated for Simulink model 'PDUSTM32'.
  *
- * Model version                  : 13.172
+ * Model version                  : 13.176
  * Simulink Coder version         : 24.2 (R2024b) 21-Jun-2024
- * C/C++ source code generated on : Fri Jul 24 00:25:56 2026
+ * C/C++ source code generated on : Fri Jul 24 22:58:52 2026
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: ARM Compatible->ARM Cortex-M
@@ -21,7 +21,7 @@
 
 /* Invariant block signals (default storage) */
 const ConstB_PDUSTM32_T PDUSTM32_ConstB = {
-  true                                 /* '<S30>/Constant' */
+  true                                 /* '<S33>/Constant' */
 };
 
 /* Constant parameters (default storage) */
@@ -34,27 +34,27 @@ const ConstP_PDUSTM32_T PDUSTM32_ConstP = {
   { 144U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U },
 
   /* Expression: 0xc0
-   * Referenced by: '<S31>/Enter Configuration Mode'
+   * Referenced by: '<S34>/Enter Configuration Mode'
    */
   192U,
 
   /* Expression: [0x02, 0x2A, 0xC0]
-   * Referenced by: '<S31>/CNF1'
+   * Referenced by: '<S34>/CNF1'
    */
   { 2U, 42U, 192U },
 
   /* Expression: [0x02, 0x29, 0x99]
-   * Referenced by: '<S31>/CNF2'
+   * Referenced by: '<S34>/CNF2'
    */
   { 2U, 41U, 153U },
 
   /* Expression: [0x02, 0x28, 0x02]
-   * Referenced by: '<S31>/CNF3'
+   * Referenced by: '<S34>/CNF3'
    */
   { 2U, 40U, 2U },
 
   /* Expression: [0x02, 0x0F, 0x00]
-   * Referenced by: '<S31>/ 000: normal mode, 0: don't abort pending transmit buffers, 0: one-shot disabled, 0: CLKOUT disabled, 00: sysclk//1 | 0000 0000 | 0x00'
+   * Referenced by: '<S34>/ 000: normal mode, 0: don't abort pending transmit buffers, 0: one-shot disabled, 0: CLKOUT disabled, 00: sysclk//1 | 0000 0000 | 0x00'
    */
   { 2U, 15U, 0U },
 

@@ -7,9 +7,9 @@
  *
  * Code generated for Simulink model 'PDUSTM32'.
  *
- * Model version                  : 13.172
+ * Model version                  : 13.176
  * Simulink Coder version         : 24.2 (R2024b) 21-Jun-2024
- * C/C++ source code generated on : Fri Jul 24 00:25:56 2026
+ * C/C++ source code generated on : Fri Jul 24 22:58:52 2026
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: ARM Compatible->ARM Cortex-M
@@ -85,17 +85,11 @@ extern void PDUSTM32_MATLABFunction_o(uint32_T rtu_ID, uint8_T rtu_Length, const
   boolean_T rtu_MCPInitialized, uint8_T *rty_WriteInstruction, uint8_T
   rty_CANVector[13], uint8_T *rty_RTSByte, DW_MATLABFunction_PDUSTM32_c_T
   *localDW);
-extern void PD_SPIControllerTransfer_o_Init(DW_SPIControllerTransfer_PD_f_T
-  *localDW);
-extern void PDUSTM3_SPIControllerTransfer_p(const uint8_T rtu_0[15],
-  DW_SPIControllerTransfer_PD_f_T *localDW);
 extern void PDU_SPIControllerTransfer1_Init(DW_SPIControllerTransfer1_PDU_T
   *localDW);
 extern void PDUSTM32_SPIControllerTransfer1(const uint8_T rtu_0[3],
   DW_SPIControllerTransfer1_PDU_T *localDW);
 extern void PDUS_SPIControllerTransfer_Term(DW_SPIControllerTransfer_PDUS_T
-  *localDW);
-extern void PD_SPIControllerTransfer_i_Term(DW_SPIControllerTransfer_PD_f_T
   *localDW);
 extern void PDU_SPIControllerTransfer1_Term(DW_SPIControllerTransfer1_PDU_T
   *localDW);
