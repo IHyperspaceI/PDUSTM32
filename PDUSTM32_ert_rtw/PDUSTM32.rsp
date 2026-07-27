@@ -2,6 +2,7 @@ mw_stm32_spi_ll.o
 stm_adc_ll.o
 PDUSTM32.o
 PDUSTM32_data.o
+can_datatype_ground.o
 ert_main.o
 overrideHALDelay.o
 platform_timer.o

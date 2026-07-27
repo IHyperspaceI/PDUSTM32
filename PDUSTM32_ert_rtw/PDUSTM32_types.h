@@ -7,9 +7,9 @@
  *
  * Code generated for Simulink model 'PDUSTM32'.
  *
- * Model version                  : 13.196
+ * Model version                  : 13.201
  * Simulink Coder version         : 24.2 (R2024b) 21-Jun-2024
- * C/C++ source code generated on : Mon Jul 27 13:32:56 2026
+ * C/C++ source code generated on : Mon Jul 27 14:52:16 2026
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: ARM Compatible->ARM Cortex-M
@@ -22,6 +22,20 @@
 #include "rtwtypes.h"
 #include "mw_stm32_spi_ll.h"
 #include "stm_adc_ll.h"
+#ifndef DEFINED_TYPEDEF_FOR_CAN_MESSAGE_def_
+#define DEFINED_TYPEDEF_FOR_CAN_MESSAGE_def_
+
+typedef struct {
+  uint32_T ID;
+  boolean_T Extended;
+  boolean_T Remote;
+  boolean_T Error;
+  real_T Length;
+  uint8_T Data[8];
+} CAN_MESSAGE_def;
+
+#endif
+
 #ifndef DEFINED_TYPEDEF_FOR_CAN_MESSAGE_BUS_
 #define DEFINED_TYPEDEF_FOR_CAN_MESSAGE_BUS_
 
@@ -60,7 +74,7 @@ typedef struct tag_eH4w3s88qRk3dEce3kceRG stm32cube_blocks_SPIControlle_T;
 
 #endif                             /* typedef_stm32cube_blocks_SPIControlle_T */
 
-/* Custom Type definition for MATLABSystem: '<S17>/Analog to Digital Converter' */
+/* Custom Type definition for MATLABSystem: '<S22>/Analog to Digital Converter' */
 #include "stm_adc_ll.h"
 #include "stm_adc_ll.h"
 #ifndef struct_tag_zOwLqZHHwTkA89oP5eJ7RB
@@ -83,6 +97,23 @@ struct tag_zOwLqZHHwTkA89oP5eJ7RB
 typedef struct tag_zOwLqZHHwTkA89oP5eJ7RB stm32cube_blocks_AnalogInputF_T;
 
 #endif                             /* typedef_stm32cube_blocks_AnalogInputF_T */
+
+#ifndef struct_tag_GSKovyH6bCN42HwFzVB4DE
+#define struct_tag_GSKovyH6bCN42HwFzVB4DE
+
+struct tag_GSKovyH6bCN42HwFzVB4DE
+{
+  int32_T isInitialized;
+};
+
+#endif                                 /* struct_tag_GSKovyH6bCN42HwFzVB4DE */
+
+#ifndef typedef_stm32cube_blocks_DigitalPortR_T
+#define typedef_stm32cube_blocks_DigitalPortR_T
+
+typedef struct tag_GSKovyH6bCN42HwFzVB4DE stm32cube_blocks_DigitalPortR_T;
+
+#endif                             /* typedef_stm32cube_blocks_DigitalPortR_T */
 
 #ifndef struct_tag_tsKyPuhWUdS8zBSeRGR2aC
 #define struct_tag_tsKyPuhWUdS8zBSeRGR2aC
