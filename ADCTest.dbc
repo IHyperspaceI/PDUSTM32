@@ -37,21 +37,21 @@ BU_:
 
 
 BO_ 66 ADCs2: 6 Vector__XXX
- SG_ VLVSystem : 32|16@1+ (1,0) [0|65535] "" Vector__XXX
- SG_ VADC6 : 16|16@1+ (1,0) [0|65535] "" Vector__XXX
- SG_ VADC5 : 0|16@1+ (1,0) [0|65535] "" Vector__XXX
+ SG_ VLVSystem : 32|16@1+ (0.00046327,0) [0|30.36039945] "" Vector__XXX
+ SG_ VADC6 : 16|16@1+ (5.04E-05,0) [0|3.302964] "" Vector__XXX
+ SG_ VADC5 : 0|16@1+ (5.04E-05,0) [0|3.302964] "" Vector__XXX
 
 BO_ 5 ADCs1: 8 Vector__XXX
- SG_ VADC4 : 48|16@1+ (1,0) [0|65535] "" Vector__XXX
- SG_ VADC3 : 32|16@1+ (1,0) [0|65535] "" Vector__XXX
- SG_ VADC2 : 16|16@1+ (1,0) [0|65535] "" Vector__XXX
- SG_ VADC1 : 0|16@1+ (1,0) [0|65535] "" Vector__XXX
+ SG_ VADC4 : 48|16@1+ (5.04E-05,0) [0|3.302964] "" Vector__XXX
+ SG_ VADC3 : 32|16@1+ (5.04E-05,0) [0|3.302964] "" Vector__XXX
+ SG_ VADC2 : 16|16@1+ (5.04E-05,0) [0|3.302964] "" Vector__XXX
+ SG_ VADC1 : 0|16@1+ (5.04E-05,0) [0|3.302964] "" Vector__XXX
 
 BO_ 105 GearboxPressures: 8 Vector__XXX
- SG_ VRRGearboxPressureSensor : 48|12@1+ (1,0) [0|65535] "" Vector__XXX
- SG_ VRLGearboxPressureSensor : 32|12@1+ (1,0) [0|65535] "" Vector__XXX
- SG_ VFRGearboxPressureSensor : 16|12@1+ (1,0) [0|65535] "" Vector__XXX
- SG_ VFLGearboxPressureSensor : 0|12@1+ (1,0) [0|65535] "" Vector__XXX
+ SG_ VRRGearboxPressureSensor : 48|12@1+ (0.0012211,0) [0|5.0004045] "" Vector__XXX
+ SG_ VRLGearboxPressureSensor : 32|12@1+ (0.0012211,0) [0|5.0004045] "" Vector__XXX
+ SG_ VFRGearboxPressureSensor : 16|12@1+ (0.0012211,0) [0|5.0004045] "" Vector__XXX
+ SG_ VFLGearboxPressureSensor : 0|12@1+ (0.0012211,0) [0|5.0004045] "" Vector__XXX
 
 
 
