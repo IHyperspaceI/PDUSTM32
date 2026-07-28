@@ -7,9 +7,9 @@
  *
  * Code generated for Simulink model 'PDUSTM32'.
  *
- * Model version                  : 13.201
+ * Model version                  : 13.206
  * Simulink Coder version         : 24.2 (R2024b) 21-Jun-2024
- * C/C++ source code generated on : Mon Jul 27 14:52:16 2026
+ * C/C++ source code generated on : Tue Jul 28 13:42:02 2026
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: ARM Compatible->ARM Cortex-M
@@ -22,20 +22,6 @@
 #include "rtwtypes.h"
 #include "mw_stm32_spi_ll.h"
 #include "stm_adc_ll.h"
-#ifndef DEFINED_TYPEDEF_FOR_CAN_MESSAGE_def_
-#define DEFINED_TYPEDEF_FOR_CAN_MESSAGE_def_
-
-typedef struct {
-  uint32_T ID;
-  boolean_T Extended;
-  boolean_T Remote;
-  boolean_T Error;
-  real_T Length;
-  uint8_T Data[8];
-} CAN_MESSAGE_def;
-
-#endif
-
 #ifndef DEFINED_TYPEDEF_FOR_CAN_MESSAGE_BUS_
 #define DEFINED_TYPEDEF_FOR_CAN_MESSAGE_BUS_
 
@@ -48,6 +34,20 @@ typedef struct {
   real_T Timestamp;
   uint8_T Data[8];
 } CAN_MESSAGE_BUS;
+
+#endif
+
+#ifndef DEFINED_TYPEDEF_FOR_CAN_MESSAGE_def_
+#define DEFINED_TYPEDEF_FOR_CAN_MESSAGE_def_
+
+typedef struct {
+  uint32_T ID;
+  boolean_T Extended;
+  boolean_T Remote;
+  boolean_T Error;
+  real_T Length;
+  uint8_T Data[8];
+} CAN_MESSAGE_def;
 
 #endif
 
