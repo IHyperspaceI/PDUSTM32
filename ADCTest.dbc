@@ -36,6 +36,12 @@ BS_:
 BU_:
 
 
+BO_ 0 Numbers: 8 Vector__XXX
+ SG_ Number4 : 48|16@1- (1,0) [-32768|32767] "" Vector__XXX
+ SG_ Number3 : 32|16@1- (1,0) [-32768|32767] "" Vector__XXX
+ SG_ Number2 : 16|16@1- (1,0) [-32768|32767] "" Vector__XXX
+ SG_ Number1 : 0|16@1- (1,0) [-32768|32767] "" Vector__XXX
+
 BO_ 66 ADCs2: 6 Vector__XXX
  SG_ VLVSystem : 32|16@1+ (0.00046327,0) [0|30.36039945] "" Vector__XXX
  SG_ VADC6 : 16|16@1+ (5.04E-05,0) [0|3.302964] "" Vector__XXX

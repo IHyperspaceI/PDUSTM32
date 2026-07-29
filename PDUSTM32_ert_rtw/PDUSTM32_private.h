@@ -7,9 +7,9 @@
  *
  * Code generated for Simulink model 'PDUSTM32'.
  *
- * Model version                  : 13.206
+ * Model version                  : 13.213
  * Simulink Coder version         : 24.2 (R2024b) 21-Jun-2024
- * C/C++ source code generated on : Tue Jul 28 13:42:02 2026
+ * C/C++ source code generated on : Wed Jul 29 19:04:52 2026
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: ARM Compatible->ARM Cortex-M
@@ -20,8 +20,8 @@
 #ifndef PDUSTM32_private_h_
 #define PDUSTM32_private_h_
 #include "rtwtypes.h"
-#include "PDUSTM32.h"
 #include "PDUSTM32_types.h"
+#include "PDUSTM32.h"
 #ifndef UCHAR_MAX
 #include <limits.h>
 #endif
@@ -73,15 +73,22 @@ preprocessor word size checks.
 /* Skipping ulong_long/long_long check: insufficient preprocessor integer range. */
 extern void PDUSTM32_MATLABFunction(const uint8_T rtu_Counts[2], real_T rtu_VA,
   real_T *rty_Voltage);
+extern void PDUSTM32_MATLABFunction_f(const uint8_T rtu_RxBytes[15],
+  CAN_MESSAGE_def *rty_Message);
+extern void PDUS_SPIControllerTransfer_Init(DW_SPIControllerTransfer_PDUS_T
+  *localDW);
+extern void PDUSTM32_SPIControllerTransfer(const uint8_T rtu_0[15],
+  B_SPIControllerTransfer_PDUST_T *localB, DW_SPIControllerTransfer_PDUS_T
+  *localDW);
 extern void PDUSTM32_MATLABFunction_o(uint32_T rtu_ID, uint8_T rtu_Length, const
   uint8_T rtu_Data[8], uint8_T rtu_RTS, uint16_T rtu_period, uint16_T rtu_offset,
   boolean_T rtu_MCPInitialized, uint8_T *rty_WriteInstruction, uint8_T
   rty_CANVector[13], uint8_T *rty_RTSByte, DW_MATLABFunction_PDUSTM32_c_T
   *localDW);
-extern void PDUS_SPIControllerTransfer_Init(DW_SPIControllerTransfer_PDUS_T
+extern void PD_SPIControllerTransfer_o_Init(DW_SPIControllerTransfer_PD_f_T
   *localDW);
-extern void PDUSTM32_SPIControllerTransfer(const uint8_T rtu_0[15],
-  DW_SPIControllerTransfer_PDUS_T *localDW);
+extern void PDUSTM3_SPIControllerTransfer_p(const uint8_T rtu_0[15],
+  DW_SPIControllerTransfer_PD_f_T *localDW);
 extern void PDU_SPIControllerTransfer1_Init(DW_SPIControllerTransfer1_PDU_T
   *localDW);
 extern void PDUSTM32_SPIControllerTransfer1(uint8_T rtu_0,
@@ -95,6 +102,8 @@ extern void PDU_SPIControllerTransfer5_Init(DW_SPIControllerTransfer5_PDU_T
 extern void PDUSTM32_SPIControllerTransfer5(const uint8_T rtu_0[4],
   DW_SPIControllerTransfer5_PDU_T *localDW);
 extern void PDUS_SPIControllerTransfer_Term(DW_SPIControllerTransfer_PDUS_T
+  *localDW);
+extern void PD_SPIControllerTransfer_i_Term(DW_SPIControllerTransfer_PD_f_T
   *localDW);
 extern void PDU_SPIControllerTransfer1_Term(DW_SPIControllerTransfer1_PDU_T
   *localDW);
