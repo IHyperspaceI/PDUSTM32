@@ -7,9 +7,9 @@
  *
  * Code generated for Simulink model 'PDUSTM32'.
  *
- * Model version                  : 13.217
+ * Model version                  : 13.218
  * Simulink Coder version         : 24.2 (R2024b) 21-Jun-2024
- * C/C++ source code generated on : Wed Jul 29 20:55:09 2026
+ * C/C++ source code generated on : Wed Jul 29 22:58:16 2026
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: ARM Compatible->ARM Cortex-M
@@ -95,6 +95,7 @@ typedef struct {
   CAN_MESSAGE_BUS CANPack3;            /* '<S7>/CAN Pack3' */
   CAN_MESSAGE_BUS CANPack4;            /* '<S7>/CAN Pack4' */
   real_T DataTypeConversion;           /* '<Root>/Data Type Conversion' */
+  real_T DataTypeConversion2;          /* '<Root>/Data Type Conversion2' */
   real_T CANUnpack_o1;                 /* '<S6>/CAN Unpack' */
   real_T CANUnpack_o2;                 /* '<S6>/CAN Unpack' */
   real_T CANUnpack_o3;                 /* '<S6>/CAN Unpack' */
@@ -137,7 +138,7 @@ typedef struct {
   boolean_T DataTypeConversion7;       /* '<S6>/Data Type Conversion7' */
   boolean_T DataTypeConversion_d;      /* '<S6>/Data Type Conversion' */
   boolean_T DataTypeConversion1;       /* '<S6>/Data Type Conversion1' */
-  boolean_T DataTypeConversion2;       /* '<S6>/Data Type Conversion2' */
+  boolean_T DataTypeConversion2_l;     /* '<S6>/Data Type Conversion2' */
   boolean_T DataTypeConversion3;       /* '<S6>/Data Type Conversion3' */
   boolean_T DataTypeConversion4;       /* '<S6>/Data Type Conversion4' */
   boolean_T DataTypeConversion5;       /* '<S6>/Data Type Conversion5' */

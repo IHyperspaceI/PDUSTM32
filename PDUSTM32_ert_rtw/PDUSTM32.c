@@ -7,9 +7,9 @@
  *
  * Code generated for Simulink model 'PDUSTM32'.
  *
- * Model version                  : 13.217
+ * Model version                  : 13.218
  * Simulink Coder version         : 24.2 (R2024b) 21-Jun-2024
- * C/C++ source code generated on : Wed Jul 29 20:55:09 2026
+ * C/C++ source code generated on : Wed Jul 29 22:58:16 2026
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: ARM Compatible->ARM Cortex-M
@@ -39,7 +39,6 @@ static void PDUSTM32_SystemCore_setup(stm32cube_blocks_AnalogInputF_T *obj);
 
 /*
  * Output and update for atomic system:
- *    '<S1>/MATLAB Function'
  *    '<S2>/MATLAB Function'
  *    '<S3>/MATLAB Function'
  *    '<S4>/MATLAB Function'
@@ -445,6 +444,7 @@ void PDUSTM32_step(void)
   uint8_T rtb_VectorConcatenate1[15];
   uint8_T rtb_VectorConcatenate2[15];
   uint8_T rtb_VectorConcatenate3[15];
+  uint8_T rtb_SPIControllerTransfer1_bx_0[2];
   uint8_T tmp[2];
   uint8_T rtb_FixPtSum1;
   uint8_T rtb_RTSByte;
@@ -480,7 +480,8 @@ void PDUSTM32_step(void)
     portNameLoc = GPIOA;
     LL_GPIO_ResetOutputPin(portNameLoc, 1U);
     MW_SPI_MasterWriteRead_Databits(PDUSTM32_DW.obj_l.MW_SPI_HANDLE,
-      &PDUSTM32_ConstP.pooled7[0], &tmp[0], 0, 2U, 1, 10U);
+      &PDUSTM32_ConstP.pooled7[0], &rtb_SPIControllerTransfer1_bx_0[0], 0, 2U, 1,
+      10U);
     LL_GPIO_SetOutputPin(portNameLoc, 1U);
   }
 
@@ -488,7 +489,8 @@ void PDUSTM32_step(void)
    *  Constant: '<S1>/VA'
    *  MATLABSystem: '<S1>/SPI Controller Transfer1'
    */
-  PDUSTM32_MATLABFunction(tmp, 5.0, &PDUSTM32_B.Voltage_a);
+  PDUSTM32_B.Voltage_a = (real_T)(((rtb_SPIControllerTransfer1_bx_0[0] << 8) +
+    rtb_SPIControllerTransfer1_bx_0[1]) >> 1 != 0) * 0.001221001221001221;
 
   /* MATLABSystem: '<S4>/SPI Controller Transfer1' incorporates:
    *  Constant: '<S4>/Dummy Bits'
@@ -1769,7 +1771,7 @@ void PDUSTM32_step(void)
     PDUSTM32_B.DataTypeConversion1 = (PDUSTM32_B.CANUnpack_o2 != 0.0);
 
     /* DataTypeConversion: '<S6>/Data Type Conversion2' */
-    PDUSTM32_B.DataTypeConversion2 = (PDUSTM32_B.CANUnpack_o3 != 0.0);
+    PDUSTM32_B.DataTypeConversion2_l = (PDUSTM32_B.CANUnpack_o3 != 0.0);
 
     /* DataTypeConversion: '<S6>/Data Type Conversion3' */
     PDUSTM32_B.DataTypeConversion3 = (PDUSTM32_B.CANUnpack_o4 != 0.0);
@@ -1791,6 +1793,11 @@ void PDUSTM32_step(void)
 
   /* DataTypeConversion: '<Root>/Data Type Conversion' */
   PDUSTM32_B.DataTypeConversion = PDUSTM32_B.Message_p.ID;
+
+  /* DataTypeConversion: '<Root>/Data Type Conversion2' incorporates:
+   *  MATLABSystem: '<S1>/SPI Controller Transfer1'
+   */
+  PDUSTM32_B.DataTypeConversion2 = rtb_SPIControllerTransfer1_bx_0[0];
 
   /* S-Function (scanpack): '<S7>/CAN Pack4' */
   /* S-Function (scanpack): '<S7>/CAN Pack4' */
@@ -1930,7 +1937,7 @@ void PDUSTM32_step(void)
       real_T outValue = 0;
 
       {
-        real_T result = 0.0;
+        real_T result = PDUSTM32_B.DataTypeConversion2;
 
         /* no scaling required */
         /* round to closest integer value for integer CAN signal */
@@ -2089,7 +2096,7 @@ void PDUSTM32_step(void)
 
   /* MATLABSystem: '<S52>/Digital Port Write' */
   portNameLoc = GPIOB;
-  if (PDUSTM32_B.DataTypeConversion2) {
+  if (PDUSTM32_B.DataTypeConversion2_l) {
     i = 128;
   } else {
     i = 0;
