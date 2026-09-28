@@ -7,9 +7,9 @@
  *
  * Code generated for Simulink model 'PDUSTM32'.
  *
- * Model version                  : 13.223
+ * Model version                  : 13.224
  * Simulink Coder version         : 24.2 (R2024b) 21-Jun-2024
- * C/C++ source code generated on : Mon Sep 28 14:40:46 2026
+ * C/C++ source code generated on : Mon Sep 28 14:55:21 2026
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: ARM Compatible->ARM Cortex-M
@@ -172,7 +172,7 @@ void PDUSTM32_MATLABFunction_o(uint32_T rtu_ID, uint8_T rtu_Length, const
         rty_CANVector[i] = 0U;
       }
 
-      *rty_RTSByte = rtu_RTS;
+      *rty_RTSByte = 3U;
       *rty_WriteInstruction = 3U;
     }
 
@@ -1163,7 +1163,7 @@ void PDUSTM32_step(void)
         rtb_VectorConcatenate2[i + 2] = 0U;
       }
 
-      rtb_RTSByte = 129U;
+      rtb_RTSByte = 3U;
       rtb_VectorConcatenate2[0] = 3U;
     }
 
