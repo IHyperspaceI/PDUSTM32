@@ -2,7 +2,7 @@
 ## Makefile generated for component 'PDUSTM32'. 
 ## 
 ## Makefile     : PDUSTM32.mk
-## Generated on : Tue Jul 28 12:41:39 2026
+## Generated on : Mon Sep 28 14:40:51 2026
 ## Final product: $(RELATIVE_PATH_TO_ANCHOR)/PDUSTM32.elf
 ## Product type : executable
 ## 
@@ -23,7 +23,7 @@ MAKEFILE                  = PDUSTM32.mk
 MATLAB_ROOT               = C:/PROGRA~1/MATLAB/R2024b
 MATLAB_BIN                = C:/PROGRA~1/MATLAB/R2024b/bin
 MATLAB_ARCH_BIN           = $(MATLAB_BIN)/win64
-START_DIR                 = C:/Users/oxbro/Documents/STM32CustomProjects/PDUSTM32
+START_DIR                 = C:/Users/Will/Desktop/OBR/Embedded/PDUSTM32
 SOLVER                    = 
 SOLVER_OBJ                = 
 CLASSIC_INTERFACE         = 0
@@ -284,7 +284,7 @@ CPPFLAGS += $(CPPFLAGS_SKIPFORSIL) $(CPPFLAGS_BASIC)
 # C++ Linker
 #---------------
 
-CPP_LDFLAGS_SKIPFORSIL = -mcpu=cortex-m7 -mthumb -mlittle-endian -mfloat-abi=hard -mfpu=fpv5-d16 --entry Reset_Handler --specs=nosys.specs  -T"C:\Users\oxbro\Documents\STM32CustomProjects\PDUSTM32\PDUSTM32Cube\STM32CubeIDE\STM32H7A3RITX_FLASH.ld"
+CPP_LDFLAGS_SKIPFORSIL = -mcpu=cortex-m7 -mthumb -mlittle-endian -mfloat-abi=hard -mfpu=fpv5-d16 --entry Reset_Handler --specs=nosys.specs  -T"C:\Users\Will\Desktop\OBR\Embedded\PDUSTM32\PDUSTM32Cube\STM32CubeIDE\STM32H7A3RITX_FLASH.ld"
 
 CPP_LDFLAGS += $(CPP_LDFLAGS_SKIPFORSIL)
 
@@ -292,7 +292,7 @@ CPP_LDFLAGS += $(CPP_LDFLAGS_SKIPFORSIL)
 # C++ Shared Library Linker
 #------------------------------
 
-CPP_SHAREDLIB_LDFLAGS_SKIPFORSIL = -mcpu=cortex-m7 -mthumb -mlittle-endian -mfloat-abi=hard -mfpu=fpv5-d16 --entry Reset_Handler --specs=nosys.specs  -T"C:\Users\oxbro\Documents\STM32CustomProjects\PDUSTM32\PDUSTM32Cube\STM32CubeIDE\STM32H7A3RITX_FLASH.ld"
+CPP_SHAREDLIB_LDFLAGS_SKIPFORSIL = -mcpu=cortex-m7 -mthumb -mlittle-endian -mfloat-abi=hard -mfpu=fpv5-d16 --entry Reset_Handler --specs=nosys.specs  -T"C:\Users\Will\Desktop\OBR\Embedded\PDUSTM32\PDUSTM32Cube\STM32CubeIDE\STM32H7A3RITX_FLASH.ld"
 
 CPP_SHAREDLIB_LDFLAGS += $(CPP_SHAREDLIB_LDFLAGS_SKIPFORSIL)
 
@@ -300,7 +300,7 @@ CPP_SHAREDLIB_LDFLAGS += $(CPP_SHAREDLIB_LDFLAGS_SKIPFORSIL)
 # Linker
 #-----------
 
-LDFLAGS_SKIPFORSIL = -mcpu=cortex-m7 -mthumb -mlittle-endian -mfloat-abi=hard -mfpu=fpv5-d16 --entry Reset_Handler --specs=nosys.specs  -T"C:\Users\oxbro\Documents\STM32CustomProjects\PDUSTM32\PDUSTM32Cube\STM32CubeIDE\STM32H7A3RITX_FLASH.ld"
+LDFLAGS_SKIPFORSIL = -mcpu=cortex-m7 -mthumb -mlittle-endian -mfloat-abi=hard -mfpu=fpv5-d16 --entry Reset_Handler --specs=nosys.specs  -T"C:\Users\Will\Desktop\OBR\Embedded\PDUSTM32\PDUSTM32Cube\STM32CubeIDE\STM32H7A3RITX_FLASH.ld"
 
 LDFLAGS += $(LDFLAGS_SKIPFORSIL)
 
@@ -324,7 +324,7 @@ MEX_CFLAGS += $(MEX_Compiler_BASIC)
 # Shared Library Linker
 #--------------------------
 
-SHAREDLIB_LDFLAGS_SKIPFORSIL = -mcpu=cortex-m7 -mthumb -mlittle-endian -mfloat-abi=hard -mfpu=fpv5-d16 --entry Reset_Handler --specs=nosys.specs  -T"C:\Users\oxbro\Documents\STM32CustomProjects\PDUSTM32\PDUSTM32Cube\STM32CubeIDE\STM32H7A3RITX_FLASH.ld"
+SHAREDLIB_LDFLAGS_SKIPFORSIL = -mcpu=cortex-m7 -mthumb -mlittle-endian -mfloat-abi=hard -mfpu=fpv5-d16 --entry Reset_Handler --specs=nosys.specs  -T"C:\Users\Will\Desktop\OBR\Embedded\PDUSTM32\PDUSTM32Cube\STM32CubeIDE\STM32H7A3RITX_FLASH.ld"
 
 SHAREDLIB_LDFLAGS += $(SHAREDLIB_LDFLAGS_SKIPFORSIL)
 

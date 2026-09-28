@@ -7,9 +7,9 @@
  *
  * Code generated for Simulink model 'PDUSTM32'.
  *
- * Model version                  : 13.218
+ * Model version                  : 13.223
  * Simulink Coder version         : 24.2 (R2024b) 21-Jun-2024
- * C/C++ source code generated on : Wed Jul 29 22:58:16 2026
+ * C/C++ source code generated on : Mon Sep 28 14:40:46 2026
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: ARM Compatible->ARM Cortex-M
@@ -23,6 +23,8 @@
 #include "PDUSTM32_private.h"
 #include "mw_stm32_spi_ll.h"
 #include "stm_adc_ll.h"
+
+const real_T PDUSTM32_RGND = 0.0;      /* real_T ground */
 
 /* Block signals (default storage) */
 B_PDUSTM32_T PDUSTM32_B;
@@ -128,8 +130,7 @@ void PDUS_SPIControllerTransfer_Term(DW_SPIControllerTransfer_PDUS_T *localDW)
  * Output and update for atomic system:
  *    '<S7>/MATLAB Function'
  *    '<S7>/MATLAB Function1'
- *    '<S7>/MATLAB Function2'
- *    '<S7>/MATLAB Function4'
+ *    '<S7>/MATLAB Function3'
  */
 void PDUSTM32_MATLABFunction_o(uint32_T rtu_ID, uint8_T rtu_Length, const
   uint8_T rtu_Data[8], uint8_T rtu_RTS, uint16_T rtu_period, uint16_T rtu_offset,
@@ -443,9 +444,8 @@ void PDUSTM32_step(void)
   uint8_T rtb_VectorConcatenate[15];
   uint8_T rtb_VectorConcatenate1[15];
   uint8_T rtb_VectorConcatenate2[15];
-  uint8_T rtb_VectorConcatenate3[15];
+  uint8_T rtb_VectorConcatenate4[15];
   uint8_T rtb_SPIControllerTransfer1_bx_0[2];
-  uint8_T tmp[2];
   uint8_T rtb_FixPtSum1;
   uint8_T rtb_RTSByte;
   uint8_T rtb_RTSByte_m;
@@ -461,7 +461,8 @@ void PDUSTM32_step(void)
     portNameLoc = GPIOA;
     LL_GPIO_ResetOutputPin(portNameLoc, 2U);
     MW_SPI_MasterWriteRead_Databits(PDUSTM32_DW.obj_d.MW_SPI_HANDLE,
-      &PDUSTM32_ConstP.pooled7[0], &tmp[0], 0, 2U, 1, 10U);
+      &PDUSTM32_ConstP.pooled7[0], &rtb_SPIControllerTransfer1_bx_0[0], 0, 2U, 1,
+      10U);
     LL_GPIO_SetOutputPin(portNameLoc, 2U);
   }
 
@@ -469,7 +470,8 @@ void PDUSTM32_step(void)
    *  Constant: '<S2>/VA'
    *  MATLABSystem: '<S2>/SPI Controller Transfer1'
    */
-  PDUSTM32_MATLABFunction(tmp, 5.0, &PDUSTM32_B.Voltage_k);
+  PDUSTM32_MATLABFunction(rtb_SPIControllerTransfer1_bx_0, 5.0,
+    &PDUSTM32_B.Voltage_k);
 
   /* MATLABSystem: '<S1>/SPI Controller Transfer1' incorporates:
    *  Constant: '<S1>/Dummy Bits'
@@ -501,7 +503,8 @@ void PDUSTM32_step(void)
     portNameLoc = GPIOB;
     LL_GPIO_ResetOutputPin(portNameLoc, 1024U);
     MW_SPI_MasterWriteRead_Databits(PDUSTM32_DW.obj_e.MW_SPI_HANDLE,
-      &PDUSTM32_ConstP.pooled7[0], &tmp[0], 0, 2U, 1, 10U);
+      &PDUSTM32_ConstP.pooled7[0], &rtb_SPIControllerTransfer1_bx_0[0], 0, 2U, 1,
+      10U);
     LL_GPIO_SetOutputPin(portNameLoc, 1024U);
   }
 
@@ -509,7 +512,8 @@ void PDUSTM32_step(void)
    *  Constant: '<S4>/VA'
    *  MATLABSystem: '<S4>/SPI Controller Transfer1'
    */
-  PDUSTM32_MATLABFunction(tmp, 5.0, &PDUSTM32_B.Voltage);
+  PDUSTM32_MATLABFunction(rtb_SPIControllerTransfer1_bx_0, 5.0,
+    &PDUSTM32_B.Voltage);
 
   /* MATLABSystem: '<S3>/SPI Controller Transfer1' incorporates:
    *  Constant: '<S3>/Dummy Bits'
@@ -520,7 +524,8 @@ void PDUSTM32_step(void)
     portNameLoc = GPIOA;
     LL_GPIO_ResetOutputPin(portNameLoc, 4U);
     MW_SPI_MasterWriteRead_Databits(PDUSTM32_DW.obj_o.MW_SPI_HANDLE,
-      &PDUSTM32_ConstP.pooled7[0], &tmp[0], 0, 2U, 1, 10U);
+      &PDUSTM32_ConstP.pooled7[0], &rtb_SPIControllerTransfer1_bx_0[0], 0, 2U, 1,
+      10U);
     LL_GPIO_SetOutputPin(portNameLoc, 4U);
   }
 
@@ -528,7 +533,8 @@ void PDUSTM32_step(void)
    *  Constant: '<S3>/VA'
    *  MATLABSystem: '<S3>/SPI Controller Transfer1'
    */
-  PDUSTM32_MATLABFunction(tmp, 5.0, &PDUSTM32_B.Voltage_g);
+  PDUSTM32_MATLABFunction(rtb_SPIControllerTransfer1_bx_0, 5.0,
+    &PDUSTM32_B.Voltage_g);
 
   /* S-Function (scanpack): '<S7>/CAN Pack1' */
   /* S-Function (scanpack): '<S7>/CAN Pack1' */
@@ -740,7 +746,7 @@ void PDUSTM32_step(void)
    *  Constant: '<S7>/RTS'
    */
   PDUSTM32_MATLABFunction_o(PDUSTM32_B.CANPack1.ID, PDUSTM32_B.CANPack1.Length,
-    PDUSTM32_B.CANPack1.Data, 129, 5, 0,
+    PDUSTM32_B.CANPack1.Data, 129, 5000, 0,
     PDUSTM32_B.OutportBufferForMCPInitialized, &rtb_VectorConcatenate[0],
     &rtb_VectorConcatenate[2], &status, &PDUSTM32_DW.sf_MATLABFunction_o);
 
@@ -959,7 +965,7 @@ void PDUSTM32_step(void)
    *  Constant: '<S7>/RTS1'
    */
   PDUSTM32_MATLABFunction_o(PDUSTM32_B.CANPack2.ID, PDUSTM32_B.CANPack2.Length,
-    PDUSTM32_B.CANPack2.Data, 129, 5, 2,
+    PDUSTM32_B.CANPack2.Data, 129, 250, 2,
     PDUSTM32_B.OutportBufferForMCPInitialized, &rtb_VectorConcatenate1[0],
     &rtb_VectorConcatenate1[2], &rtb_RTSByte_m, &PDUSTM32_DW.sf_MATLABFunction1);
 
@@ -1121,19 +1127,174 @@ void PDUSTM32_step(void)
   }
 
   /* MATLAB Function: '<S7>/MATLAB Function2' incorporates:
-   *  Constant: '<S7>/Offset2'
    *  Constant: '<S7>/Period2'
    *  Constant: '<S7>/RTS2'
    */
-  PDUSTM32_MATLABFunction_o(PDUSTM32_B.CANPack3.ID, PDUSTM32_B.CANPack3.Length,
-    PDUSTM32_B.CANPack3.Data, 129, 5, 4,
-    PDUSTM32_B.OutportBufferForMCPInitialized, &rtb_VectorConcatenate2[0],
-    &rtb_VectorConcatenate2[2], &rtb_RTSByte, &PDUSTM32_DW.sf_MATLABFunction2);
+  if (PDUSTM32_B.OutportBufferForMCPInitialized) {
+    if (PDUSTM32_DW.count == 0) {
+      pinReadLoc = PDUSTM32_B.CANPack3.ID;
+      if (PDUSTM32_B.CANPack3.ID > 65535U) {
+        pinReadLoc = 65535U;
+      }
+
+      for (i = 0; i < 13; i++) {
+        rtb_VectorConcatenate2[i + 2] = 0U;
+      }
+
+      i = (uint16_T)pinReadLoc >> 3;
+      if (i > 255) {
+        i = 255;
+      }
+
+      rtb_VectorConcatenate2[2] = (uint8_T)i;
+      rtb_VectorConcatenate2[3] = (uint8_T)((int32_T)((uint16_T)pinReadLoc & 7U)
+        << 5);
+      rtb_VectorConcatenate2[4] = 0U;
+      rtb_VectorConcatenate2[5] = 0U;
+      rtb_VectorConcatenate2[6] = (uint8_T)(PDUSTM32_B.CANPack3.Length & 15);
+      for (i = 0; i < 8; i++) {
+        rtb_VectorConcatenate2[i + 7] = PDUSTM32_B.CANPack3.Data[i];
+      }
+
+      rtb_RTSByte = 129U;
+      rtb_VectorConcatenate2[0] = 2U;
+    } else {
+      for (i = 0; i < 13; i++) {
+        rtb_VectorConcatenate2[i + 2] = 0U;
+      }
+
+      rtb_RTSByte = 129U;
+      rtb_VectorConcatenate2[0] = 3U;
+    }
+
+    pinReadLoc = PDUSTM32_DW.count + 1U;
+    if (PDUSTM32_DW.count + 1U > 65535U) {
+      pinReadLoc = 65535U;
+    }
+
+    PDUSTM32_DW.count = (uint16_T)pinReadLoc;
+    if (PDUSTM32_DW.count >= 250) {
+      PDUSTM32_DW.count = 0U;
+    }
+  } else {
+    for (i = 0; i < 13; i++) {
+      rtb_VectorConcatenate2[i + 2] = 0U;
+    }
+
+    rtb_RTSByte = 3U;
+    rtb_VectorConcatenate2[0] = 3U;
+  }
+
+  /* End of MATLAB Function: '<S7>/MATLAB Function2' */
 
   /* Constant: '<S7>/TX Buffer 2' */
   rtb_VectorConcatenate2[1] = 49U;
   PDUSTM3_SPIControllerTransfer_p(rtb_VectorConcatenate2,
     &PDUSTM32_DW.SPIControllerTransfer4);
+
+  /* S-Function (scanpack): '<S7>/CAN Pack5' */
+  /* S-Function (scanpack): '<S7>/CAN Pack5' */
+  PDUSTM32_B.CANPack5.ID = 1328U;
+  PDUSTM32_B.CANPack5.Length = 8U;
+  PDUSTM32_B.CANPack5.Extended = 0U;
+  PDUSTM32_B.CANPack5.Remote = 0;
+  PDUSTM32_B.CANPack5.Data[0] = 0;
+  PDUSTM32_B.CANPack5.Data[1] = 0;
+  PDUSTM32_B.CANPack5.Data[2] = 0;
+  PDUSTM32_B.CANPack5.Data[3] = 0;
+  PDUSTM32_B.CANPack5.Data[4] = 0;
+  PDUSTM32_B.CANPack5.Data[5] = 0;
+  PDUSTM32_B.CANPack5.Data[6] = 0;
+  PDUSTM32_B.CANPack5.Data[7] = 0;
+
+  {
+    /* --------------- START Packing signal 0 ------------------
+     *  startBit                = 8
+     *  length                  = 8
+     *  desiredSignalByteLayout = LITTLEENDIAN
+     *  dataType                = UNSIGNED
+     *  factor                  = 1.0
+     *  offset                  = 0.0
+     *  minimum                 = 0.0
+     *  maximum                 = 0.0
+     * -----------------------------------------------------------------------*/
+
+    /* --------------- START Packing signal 1 ------------------
+     *  startBit                = 16
+     *  length                  = 8
+     *  desiredSignalByteLayout = LITTLEENDIAN
+     *  dataType                = UNSIGNED
+     *  factor                  = 1.0
+     *  offset                  = 0.0
+     *  minimum                 = 0.0
+     *  maximum                 = 0.0
+     * -----------------------------------------------------------------------*/
+
+    /* --------------- START Packing signal 2 ------------------
+     *  startBit                = 0
+     *  length                  = 8
+     *  desiredSignalByteLayout = LITTLEENDIAN
+     *  dataType                = UNSIGNED
+     *  factor                  = 0.1216
+     *  offset                  = 0.0
+     *  minimum                 = 0.0
+     *  maximum                 = 0.0
+     * -----------------------------------------------------------------------*/
+    {
+      real32_T outValue = 0;
+
+      {
+        real32_T result = PDUSTM32_B.Gain;
+
+        /* no offset to apply */
+        result = result * (1 / 0.1216F);
+
+        /* round to closest integer value for integer CAN signal */
+        outValue = roundf(result);
+      }
+
+      {
+        uint8_T packedValue;
+        if (outValue > (real32_T)(255)) {
+          packedValue = (uint8_T) 255;
+        } else if (outValue < (real32_T)(0)) {
+          packedValue = (uint8_T) 0;
+        } else {
+          packedValue = (uint8_T) (outValue);
+        }
+
+        {
+          {
+            PDUSTM32_B.CANPack5.Data[0] = PDUSTM32_B.CANPack5.Data[0] | (uint8_T)
+              (packedValue);
+          }
+        }
+      }
+    }
+  }
+
+  /* MATLAB Function: '<S7>/MATLAB Function3' incorporates:
+   *  Constant: '<S7>/Offset4'
+   *  Constant: '<S7>/Period4'
+   *  Constant: '<S7>/RTS4'
+   */
+  PDUSTM32_MATLABFunction_o(PDUSTM32_B.CANPack5.ID, PDUSTM32_B.CANPack5.Length,
+    PDUSTM32_B.CANPack5.Data, 129, 250, 9,
+    PDUSTM32_B.OutportBufferForMCPInitialized, &rtb_VectorConcatenate4[0],
+    &rtb_VectorConcatenate4[2], &rtb_FixPtSum1, &PDUSTM32_DW.sf_MATLABFunction3);
+
+  /* Constant: '<S7>/TX Buffer 4' */
+  rtb_VectorConcatenate4[1] = 49U;
+  PDUSTM3_SPIControllerTransfer_p(rtb_VectorConcatenate4,
+    &PDUSTM32_DW.SPIControllerTransfer8);
+  PDUSTM32_SPIControllerTransfer1(status,
+    &PDUSTM32_DW.SPIControllerTransfer1_pnae);
+  PDUSTM32_SPIControllerTransfer1(rtb_RTSByte_m,
+    &PDUSTM32_DW.SPIControllerTransfer3);
+  PDUSTM32_SPIControllerTransfer1(rtb_RTSByte,
+    &PDUSTM32_DW.SPIControllerTransfer5);
+  PDUSTM32_SPIControllerTransfer1(rtb_FixPtSum1,
+    &PDUSTM32_DW.SPIControllerTransfer9);
 
   /* MATLABSystem: '<S37>/Digital Port Read' */
   pinReadLoc = LL_GPIO_ReadInputPort(GPIOB);
@@ -1765,13 +1926,13 @@ void PDUSTM32_step(void)
     PDUSTM32_B.DataTypeConversion7 = (PDUSTM32_B.CANUnpack1_o8 != 0.0);
 
     /* DataTypeConversion: '<S6>/Data Type Conversion' */
-    PDUSTM32_B.DataTypeConversion_d = (PDUSTM32_B.CANUnpack_o1 != 0.0);
+    PDUSTM32_B.DataTypeConversion = (PDUSTM32_B.CANUnpack_o1 != 0.0);
 
     /* DataTypeConversion: '<S6>/Data Type Conversion1' */
     PDUSTM32_B.DataTypeConversion1 = (PDUSTM32_B.CANUnpack_o2 != 0.0);
 
     /* DataTypeConversion: '<S6>/Data Type Conversion2' */
-    PDUSTM32_B.DataTypeConversion2_l = (PDUSTM32_B.CANUnpack_o3 != 0.0);
+    PDUSTM32_B.DataTypeConversion2 = (PDUSTM32_B.CANUnpack_o3 != 0.0);
 
     /* DataTypeConversion: '<S6>/Data Type Conversion3' */
     PDUSTM32_B.DataTypeConversion3 = (PDUSTM32_B.CANUnpack_o4 != 0.0);
@@ -1784,276 +1945,9 @@ void PDUSTM32_step(void)
 
     /* DataTypeConversion: '<S6>/Data Type Conversion6' */
     PDUSTM32_B.DataTypeConversion6 = (PDUSTM32_B.CANUnpack_o7 != 0.0);
-
-    /* SignalConversion generated from: '<S6>/Length' */
-    PDUSTM32_B.Length = PDUSTM32_B.Message_p.Length;
   }
 
   /* End of Outputs for SubSystem: '<Root>/CAN Rx' */
-
-  /* DataTypeConversion: '<Root>/Data Type Conversion' */
-  PDUSTM32_B.DataTypeConversion = PDUSTM32_B.Message_p.ID;
-
-  /* DataTypeConversion: '<Root>/Data Type Conversion2' incorporates:
-   *  MATLABSystem: '<S1>/SPI Controller Transfer1'
-   */
-  PDUSTM32_B.DataTypeConversion2 = rtb_SPIControllerTransfer1_bx_0[0];
-
-  /* S-Function (scanpack): '<S7>/CAN Pack4' */
-  /* S-Function (scanpack): '<S7>/CAN Pack4' */
-  PDUSTM32_B.CANPack4.ID = 0U;
-  PDUSTM32_B.CANPack4.Length = 8U;
-  PDUSTM32_B.CANPack4.Extended = 0U;
-  PDUSTM32_B.CANPack4.Remote = 0;
-  PDUSTM32_B.CANPack4.Data[0] = 0;
-  PDUSTM32_B.CANPack4.Data[1] = 0;
-  PDUSTM32_B.CANPack4.Data[2] = 0;
-  PDUSTM32_B.CANPack4.Data[3] = 0;
-  PDUSTM32_B.CANPack4.Data[4] = 0;
-  PDUSTM32_B.CANPack4.Data[5] = 0;
-  PDUSTM32_B.CANPack4.Data[6] = 0;
-  PDUSTM32_B.CANPack4.Data[7] = 0;
-
-  {
-    /* --------------- START Packing signal 0 ------------------
-     *  startBit                = 0
-     *  length                  = 16
-     *  desiredSignalByteLayout = LITTLEENDIAN
-     *  dataType                = SIGNED
-     *  factor                  = 1.0
-     *  offset                  = 0.0
-     *  minimum                 = 0.0
-     *  maximum                 = 0.0
-     * -----------------------------------------------------------------------*/
-    {
-      real_T outValue = 0;
-
-      {
-        real_T result = PDUSTM32_B.DataTypeConversion;
-
-        /* no scaling required */
-        /* round to closest integer value for integer CAN signal */
-        outValue = round(result);
-      }
-
-      {
-        int16_T packedValue;
-        int32_T scaledValue;
-        if (outValue > 2147483647.0) {
-          scaledValue = 2147483647;
-        } else if (outValue < -2147483648.0) {
-          scaledValue = -2147483647 - 1;
-        } else {
-          scaledValue = (int32_T) outValue;
-        }
-
-        if (scaledValue > (int32_T) (32767)) {
-          packedValue = 32767;
-        } else if (scaledValue < (int32_T)((-(32767)-1))) {
-          packedValue = (-(32767)-1);
-        } else {
-          packedValue = (int16_T) (scaledValue);
-        }
-
-        {
-          uint16_T* tempValuePtr = (uint16_T*)&packedValue;
-          uint16_T tempValue = *tempValuePtr;
-
-          {
-            PDUSTM32_B.CANPack4.Data[0] = PDUSTM32_B.CANPack4.Data[0] | (uint8_T)
-              ((uint16_T)(tempValue & (uint16_T)0xFFU));
-            PDUSTM32_B.CANPack4.Data[1] = PDUSTM32_B.CANPack4.Data[1] | (uint8_T)
-              ((uint16_T)((uint16_T)(tempValue & (uint16_T)0xFF00U) >> 8));
-          }
-        }
-      }
-    }
-
-    /* --------------- START Packing signal 1 ------------------
-     *  startBit                = 16
-     *  length                  = 16
-     *  desiredSignalByteLayout = LITTLEENDIAN
-     *  dataType                = SIGNED
-     *  factor                  = 1.0
-     *  offset                  = 0.0
-     *  minimum                 = 0.0
-     *  maximum                 = 0.0
-     * -----------------------------------------------------------------------*/
-    {
-      real_T outValue = 0;
-
-      {
-        real_T result = PDUSTM32_B.Length;
-
-        /* no scaling required */
-        /* round to closest integer value for integer CAN signal */
-        outValue = round(result);
-      }
-
-      {
-        int16_T packedValue;
-        int32_T scaledValue;
-        if (outValue > 2147483647.0) {
-          scaledValue = 2147483647;
-        } else if (outValue < -2147483648.0) {
-          scaledValue = -2147483647 - 1;
-        } else {
-          scaledValue = (int32_T) outValue;
-        }
-
-        if (scaledValue > (int32_T) (32767)) {
-          packedValue = 32767;
-        } else if (scaledValue < (int32_T)((-(32767)-1))) {
-          packedValue = (-(32767)-1);
-        } else {
-          packedValue = (int16_T) (scaledValue);
-        }
-
-        {
-          uint16_T* tempValuePtr = (uint16_T*)&packedValue;
-          uint16_T tempValue = *tempValuePtr;
-
-          {
-            PDUSTM32_B.CANPack4.Data[2] = PDUSTM32_B.CANPack4.Data[2] | (uint8_T)
-              ((uint16_T)(tempValue & (uint16_T)0xFFU));
-            PDUSTM32_B.CANPack4.Data[3] = PDUSTM32_B.CANPack4.Data[3] | (uint8_T)
-              ((uint16_T)((uint16_T)(tempValue & (uint16_T)0xFF00U) >> 8));
-          }
-        }
-      }
-    }
-
-    /* --------------- START Packing signal 2 ------------------
-     *  startBit                = 32
-     *  length                  = 16
-     *  desiredSignalByteLayout = LITTLEENDIAN
-     *  dataType                = SIGNED
-     *  factor                  = 1.0
-     *  offset                  = 0.0
-     *  minimum                 = 0.0
-     *  maximum                 = 0.0
-     * -----------------------------------------------------------------------*/
-    {
-      real_T outValue = 0;
-
-      {
-        real_T result = PDUSTM32_B.DataTypeConversion2;
-
-        /* no scaling required */
-        /* round to closest integer value for integer CAN signal */
-        outValue = round(result);
-      }
-
-      {
-        int16_T packedValue;
-        int32_T scaledValue;
-        if (outValue > 2147483647.0) {
-          scaledValue = 2147483647;
-        } else if (outValue < -2147483648.0) {
-          scaledValue = -2147483647 - 1;
-        } else {
-          scaledValue = (int32_T) outValue;
-        }
-
-        if (scaledValue > (int32_T) (32767)) {
-          packedValue = 32767;
-        } else if (scaledValue < (int32_T)((-(32767)-1))) {
-          packedValue = (-(32767)-1);
-        } else {
-          packedValue = (int16_T) (scaledValue);
-        }
-
-        {
-          uint16_T* tempValuePtr = (uint16_T*)&packedValue;
-          uint16_T tempValue = *tempValuePtr;
-
-          {
-            PDUSTM32_B.CANPack4.Data[4] = PDUSTM32_B.CANPack4.Data[4] | (uint8_T)
-              ((uint16_T)(tempValue & (uint16_T)0xFFU));
-            PDUSTM32_B.CANPack4.Data[5] = PDUSTM32_B.CANPack4.Data[5] | (uint8_T)
-              ((uint16_T)((uint16_T)(tempValue & (uint16_T)0xFF00U) >> 8));
-          }
-        }
-      }
-    }
-
-    /* --------------- START Packing signal 3 ------------------
-     *  startBit                = 48
-     *  length                  = 16
-     *  desiredSignalByteLayout = LITTLEENDIAN
-     *  dataType                = SIGNED
-     *  factor                  = 1.0
-     *  offset                  = 0.0
-     *  minimum                 = 0.0
-     *  maximum                 = 0.0
-     * -----------------------------------------------------------------------*/
-    {
-      real_T outValue = 0;
-
-      {
-        real_T result = 0.0;
-
-        /* no scaling required */
-        /* round to closest integer value for integer CAN signal */
-        outValue = round(result);
-      }
-
-      {
-        int16_T packedValue;
-        int32_T scaledValue;
-        if (outValue > 2147483647.0) {
-          scaledValue = 2147483647;
-        } else if (outValue < -2147483648.0) {
-          scaledValue = -2147483647 - 1;
-        } else {
-          scaledValue = (int32_T) outValue;
-        }
-
-        if (scaledValue > (int32_T) (32767)) {
-          packedValue = 32767;
-        } else if (scaledValue < (int32_T)((-(32767)-1))) {
-          packedValue = (-(32767)-1);
-        } else {
-          packedValue = (int16_T) (scaledValue);
-        }
-
-        {
-          uint16_T* tempValuePtr = (uint16_T*)&packedValue;
-          uint16_T tempValue = *tempValuePtr;
-
-          {
-            PDUSTM32_B.CANPack4.Data[6] = PDUSTM32_B.CANPack4.Data[6] | (uint8_T)
-              ((uint16_T)(tempValue & (uint16_T)0xFFU));
-            PDUSTM32_B.CANPack4.Data[7] = PDUSTM32_B.CANPack4.Data[7] | (uint8_T)
-              ((uint16_T)((uint16_T)(tempValue & (uint16_T)0xFF00U) >> 8));
-          }
-        }
-      }
-    }
-  }
-
-  /* MATLAB Function: '<S7>/MATLAB Function4' incorporates:
-   *  Constant: '<S7>/Offset3'
-   *  Constant: '<S7>/Period3'
-   *  Constant: '<S7>/RTS3'
-   */
-  PDUSTM32_MATLABFunction_o(PDUSTM32_B.CANPack4.ID, PDUSTM32_B.CANPack4.Length,
-    PDUSTM32_B.CANPack4.Data, 129, 5, 3,
-    PDUSTM32_B.OutportBufferForMCPInitialized, &rtb_VectorConcatenate3[0],
-    &rtb_VectorConcatenate3[2], &rtb_FixPtSum1, &PDUSTM32_DW.sf_MATLABFunction4);
-
-  /* Constant: '<S7>/TX Buffer 3' */
-  rtb_VectorConcatenate3[1] = 49U;
-  PDUSTM3_SPIControllerTransfer_p(rtb_VectorConcatenate3,
-    &PDUSTM32_DW.SPIControllerTransfer6);
-  PDUSTM32_SPIControllerTransfer1(status,
-    &PDUSTM32_DW.SPIControllerTransfer1_pnae);
-  PDUSTM32_SPIControllerTransfer1(rtb_RTSByte_m,
-    &PDUSTM32_DW.SPIControllerTransfer3);
-  PDUSTM32_SPIControllerTransfer1(rtb_RTSByte,
-    &PDUSTM32_DW.SPIControllerTransfer5);
-  PDUSTM32_SPIControllerTransfer1(rtb_FixPtSum1,
-    &PDUSTM32_DW.SPIControllerTransfer7);
 
   /* MATLABSystem: '<S46>/Digital Port Write' */
   portNameLoc = GPIOB;
@@ -2096,7 +1990,7 @@ void PDUSTM32_step(void)
 
   /* MATLABSystem: '<S52>/Digital Port Write' */
   portNameLoc = GPIOB;
-  if (PDUSTM32_B.DataTypeConversion2_l) {
+  if (PDUSTM32_B.DataTypeConversion2) {
     i = 128;
   } else {
     i = 0;
@@ -2122,7 +2016,7 @@ void PDUSTM32_step(void)
 
   /* MATLABSystem: '<S56>/Digital Port Write' */
   portNameLoc = GPIOB;
-  if (PDUSTM32_B.DataTypeConversion_d) {
+  if (PDUSTM32_B.DataTypeConversion) {
     i = 4096;
   } else {
     i = 0;
@@ -2250,9 +2144,9 @@ void PDUSTM32_step(void)
     PDUSTM32_SPIControllerTransfer5(PDUSTM32_ConstP.CANINTE_Value,
       &PDUSTM32_DW.SPIControllerTransfer5_p);
     PDUSTM_SPIControllerTransfer1_p(PDUSTM32_ConstP.Setacceptancefilters_Value,
-      &PDUSTM32_DW.SPIControllerTransfer6_p);
+      &PDUSTM32_DW.SPIControllerTransfer6);
     PDUSTM32_SPIControllerTransfer5(PDUSTM32_ConstP.Clearflags_Value,
-      &PDUSTM32_DW.SPIControllerTransfer7_p);
+      &PDUSTM32_DW.SPIControllerTransfer7);
     PDUSTM_SPIControllerTransfer1_p
       (PDUSTM32_ConstP.u00normalmode0dontabortpendingt,
        &PDUSTM32_DW.SPIControllerTransfer4_p);
@@ -2321,8 +2215,8 @@ void PDUSTM32_initialize(void)
     P_SPIControllerTransfer1_k_Init(&PDUSTM32_DW.SPIControllerTransfer2_pn);
     P_SPIControllerTransfer1_k_Init(&PDUSTM32_DW.SPIControllerTransfer3_p);
     PDU_SPIControllerTransfer5_Init(&PDUSTM32_DW.SPIControllerTransfer5_p);
-    P_SPIControllerTransfer1_k_Init(&PDUSTM32_DW.SPIControllerTransfer6_p);
-    PDU_SPIControllerTransfer5_Init(&PDUSTM32_DW.SPIControllerTransfer7_p);
+    P_SPIControllerTransfer1_k_Init(&PDUSTM32_DW.SPIControllerTransfer6);
+    PDU_SPIControllerTransfer5_Init(&PDUSTM32_DW.SPIControllerTransfer7);
     P_SPIControllerTransfer1_k_Init(&PDUSTM32_DW.SPIControllerTransfer4_p);
 
     /* End of SystemInitialize for SubSystem: '<S13>/MCPInit' */
@@ -2370,11 +2264,11 @@ void PDUSTM32_initialize(void)
     PDUSTM32_SystemCore_setup(&PDUSTM32_DW.obj_n);
     PD_SPIControllerTransfer_o_Init(&PDUSTM32_DW.SPIControllerTransfer2);
     PD_SPIControllerTransfer_o_Init(&PDUSTM32_DW.SPIControllerTransfer4);
-    PD_SPIControllerTransfer_o_Init(&PDUSTM32_DW.SPIControllerTransfer6);
+    PD_SPIControllerTransfer_o_Init(&PDUSTM32_DW.SPIControllerTransfer8);
     PDU_SPIControllerTransfer1_Init(&PDUSTM32_DW.SPIControllerTransfer1_pnae);
     PDU_SPIControllerTransfer1_Init(&PDUSTM32_DW.SPIControllerTransfer3);
     PDU_SPIControllerTransfer1_Init(&PDUSTM32_DW.SPIControllerTransfer5);
-    PDU_SPIControllerTransfer1_Init(&PDUSTM32_DW.SPIControllerTransfer7);
+    PDU_SPIControllerTransfer1_Init(&PDUSTM32_DW.SPIControllerTransfer9);
   }
 
   /* user code (Initialize function Body) */
@@ -2451,17 +2345,17 @@ void PDUSTM32_terminate(void)
   /* End of Terminate for MATLABSystem: '<S27>/Analog to Digital Converter' */
   PD_SPIControllerTransfer_i_Term(&PDUSTM32_DW.SPIControllerTransfer2);
   PD_SPIControllerTransfer_i_Term(&PDUSTM32_DW.SPIControllerTransfer4);
+  PD_SPIControllerTransfer_i_Term(&PDUSTM32_DW.SPIControllerTransfer8);
+  PDU_SPIControllerTransfer1_Term(&PDUSTM32_DW.SPIControllerTransfer1_pnae);
+  PDU_SPIControllerTransfer1_Term(&PDUSTM32_DW.SPIControllerTransfer3);
+  PDU_SPIControllerTransfer1_Term(&PDUSTM32_DW.SPIControllerTransfer5);
+  PDU_SPIControllerTransfer1_Term(&PDUSTM32_DW.SPIControllerTransfer9);
 
   /* Terminate for Enabled SubSystem: '<Root>/CAN Rx' */
   PDUS_SPIControllerTransfer_Term(&PDUSTM32_DW.SPIControllerTransfer_p);
   PDUS_SPIControllerTransfer_Term(&PDUSTM32_DW.SPIControllerTransfer2_p);
 
   /* End of Terminate for SubSystem: '<Root>/CAN Rx' */
-  PD_SPIControllerTransfer_i_Term(&PDUSTM32_DW.SPIControllerTransfer6);
-  PDU_SPIControllerTransfer1_Term(&PDUSTM32_DW.SPIControllerTransfer1_pnae);
-  PDU_SPIControllerTransfer1_Term(&PDUSTM32_DW.SPIControllerTransfer3);
-  PDU_SPIControllerTransfer1_Term(&PDUSTM32_DW.SPIControllerTransfer5);
-  PDU_SPIControllerTransfer1_Term(&PDUSTM32_DW.SPIControllerTransfer7);
 
   /* Terminate for Enabled SubSystem: '<S13>/MCPInit' */
   /* Terminate for MATLABSystem: '<S44>/SPI Controller Transfer' */
@@ -2480,8 +2374,8 @@ void PDUSTM32_terminate(void)
   P_SPIControllerTransfer1_g_Term(&PDUSTM32_DW.SPIControllerTransfer2_pn);
   P_SPIControllerTransfer1_g_Term(&PDUSTM32_DW.SPIControllerTransfer3_p);
   PDU_SPIControllerTransfer5_Term(&PDUSTM32_DW.SPIControllerTransfer5_p);
-  P_SPIControllerTransfer1_g_Term(&PDUSTM32_DW.SPIControllerTransfer6_p);
-  PDU_SPIControllerTransfer5_Term(&PDUSTM32_DW.SPIControllerTransfer7_p);
+  P_SPIControllerTransfer1_g_Term(&PDUSTM32_DW.SPIControllerTransfer6);
+  PDU_SPIControllerTransfer5_Term(&PDUSTM32_DW.SPIControllerTransfer7);
   P_SPIControllerTransfer1_g_Term(&PDUSTM32_DW.SPIControllerTransfer4_p);
 
   /* End of Terminate for SubSystem: '<S13>/MCPInit' */

@@ -7,9 +7,9 @@
  *
  * Code generated for Simulink model 'PDUSTM32'.
  *
- * Model version                  : 13.218
+ * Model version                  : 13.223
  * Simulink Coder version         : 24.2 (R2024b) 21-Jun-2024
- * C/C++ source code generated on : Wed Jul 29 22:58:16 2026
+ * C/C++ source code generated on : Mon Sep 28 14:40:46 2026
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: ARM Compatible->ARM Cortex-M
@@ -93,9 +93,7 @@ typedef struct {
   CAN_MESSAGE_BUS CANPack1;            /* '<S7>/CAN Pack1' */
   CAN_MESSAGE_BUS CANPack2;            /* '<S7>/CAN Pack2' */
   CAN_MESSAGE_BUS CANPack3;            /* '<S7>/CAN Pack3' */
-  CAN_MESSAGE_BUS CANPack4;            /* '<S7>/CAN Pack4' */
-  real_T DataTypeConversion;           /* '<Root>/Data Type Conversion' */
-  real_T DataTypeConversion2;          /* '<Root>/Data Type Conversion2' */
+  CAN_MESSAGE_BUS CANPack5;            /* '<S7>/CAN Pack5' */
   real_T CANUnpack_o1;                 /* '<S6>/CAN Unpack' */
   real_T CANUnpack_o2;                 /* '<S6>/CAN Unpack' */
   real_T CANUnpack_o3;                 /* '<S6>/CAN Unpack' */
@@ -127,7 +125,6 @@ typedef struct {
   real_T CANUnpack1_o22;               /* '<S6>/CAN Unpack1' */
   real_T CANUnpack1_o23;               /* '<S6>/CAN Unpack1' */
   real_T CANUnpack1_o24;               /* '<S6>/CAN Unpack1' */
-  real_T Length;
   real_T Voltage;                      /* '<S4>/MATLAB Function' */
   real_T Voltage_g;                    /* '<S3>/MATLAB Function' */
   real_T Voltage_k;                    /* '<S2>/MATLAB Function' */
@@ -136,9 +133,9 @@ typedef struct {
   real32_T Gain;                       /* '<Root>/Gain' */
   boolean_T OutportBufferForMCPInitialized;/* '<S43>/Constant' */
   boolean_T DataTypeConversion7;       /* '<S6>/Data Type Conversion7' */
-  boolean_T DataTypeConversion_d;      /* '<S6>/Data Type Conversion' */
+  boolean_T DataTypeConversion;        /* '<S6>/Data Type Conversion' */
   boolean_T DataTypeConversion1;       /* '<S6>/Data Type Conversion1' */
-  boolean_T DataTypeConversion2_l;     /* '<S6>/Data Type Conversion2' */
+  boolean_T DataTypeConversion2;       /* '<S6>/Data Type Conversion2' */
   boolean_T DataTypeConversion3;       /* '<S6>/Data Type Conversion3' */
   boolean_T DataTypeConversion4;       /* '<S6>/Data Type Conversion4' */
   boolean_T DataTypeConversion5;       /* '<S6>/Data Type Conversion5' */
@@ -160,29 +157,29 @@ typedef struct {
   int_T CANPack1_ModeSignalID;         /* '<S7>/CAN Pack1' */
   int_T CANPack2_ModeSignalID;         /* '<S7>/CAN Pack2' */
   int_T CANPack3_ModeSignalID;         /* '<S7>/CAN Pack3' */
-  int_T CANPack4_ModeSignalID;         /* '<S7>/CAN Pack4' */
+  int_T CANPack5_ModeSignalID;         /* '<S7>/CAN Pack5' */
   int_T CANUnpack_ModeSignalID;        /* '<S6>/CAN Unpack' */
   int_T CANUnpack_StatusPortID;        /* '<S6>/CAN Unpack' */
   int_T CANUnpack1_ModeSignalID;       /* '<S6>/CAN Unpack1' */
   int_T CANUnpack1_StatusPortID;       /* '<S6>/CAN Unpack1' */
+  uint16_T count;                      /* '<S7>/MATLAB Function2' */
   uint8_T Output_DSTATE;               /* '<S9>/Output' */
-  DW_SPIControllerTransfer5_PDU_T SPIControllerTransfer7_p;/* '<S44>/SPI Controller Transfer5' */
-  DW_SPIControllerTransfer1_P_f_T SPIControllerTransfer6_p;/* '<S44>/SPI Controller Transfer1' */
+  DW_SPIControllerTransfer5_PDU_T SPIControllerTransfer7;/* '<S44>/SPI Controller Transfer5' */
+  DW_SPIControllerTransfer1_P_f_T SPIControllerTransfer6;/* '<S44>/SPI Controller Transfer1' */
   DW_SPIControllerTransfer5_PDU_T SPIControllerTransfer5_p;/* '<S44>/SPI Controller Transfer5' */
   DW_SPIControllerTransfer1_P_f_T SPIControllerTransfer4_p;/* '<S44>/SPI Controller Transfer1' */
   DW_SPIControllerTransfer1_P_f_T SPIControllerTransfer3_p;/* '<S44>/SPI Controller Transfer1' */
   DW_SPIControllerTransfer1_P_f_T SPIControllerTransfer2_pn;/* '<S44>/SPI Controller Transfer1' */
   DW_SPIControllerTransfer1_P_f_T SPIControllerTransfer1_pnaev;/* '<S44>/SPI Controller Transfer1' */
-  DW_SPIControllerTransfer1_PDU_T SPIControllerTransfer7;/* '<S7>/SPI Controller Transfer1' */
-  DW_SPIControllerTransfer_PD_f_T SPIControllerTransfer6;/* '<S7>/SPI Controller Transfer' */
+  DW_SPIControllerTransfer1_PDU_T SPIControllerTransfer9;/* '<S7>/SPI Controller Transfer1' */
+  DW_SPIControllerTransfer_PD_f_T SPIControllerTransfer8;/* '<S7>/SPI Controller Transfer' */
   DW_SPIControllerTransfer1_PDU_T SPIControllerTransfer5;/* '<S7>/SPI Controller Transfer1' */
   DW_SPIControllerTransfer_PD_f_T SPIControllerTransfer4;/* '<S7>/SPI Controller Transfer' */
   DW_SPIControllerTransfer1_PDU_T SPIControllerTransfer3;/* '<S7>/SPI Controller Transfer1' */
   DW_SPIControllerTransfer_PD_f_T SPIControllerTransfer2;/* '<S7>/SPI Controller Transfer' */
   DW_SPIControllerTransfer1_PDU_T SPIControllerTransfer1_pnae;/* '<S7>/SPI Controller Transfer1' */
   DW_SPIControllerTransfer_PD_f_T SPIControllerTransfer;/* '<S7>/SPI Controller Transfer' */
-  DW_MATLABFunction_PDUSTM32_c_T sf_MATLABFunction4;/* '<S7>/MATLAB Function4' */
-  DW_MATLABFunction_PDUSTM32_c_T sf_MATLABFunction2;/* '<S7>/MATLAB Function2' */
+  DW_MATLABFunction_PDUSTM32_c_T sf_MATLABFunction3;/* '<S7>/MATLAB Function3' */
   DW_MATLABFunction_PDUSTM32_c_T sf_MATLABFunction1;/* '<S7>/MATLAB Function1' */
   DW_MATLABFunction_PDUSTM32_c_T sf_MATLABFunction_o;/* '<S7>/MATLAB Function' */
   DW_SPIControllerTransfer_PDUS_T SPIControllerTransfer2_p;/* '<S6>/SPI Controller Transfer' */
@@ -274,6 +271,9 @@ extern B_PDUSTM32_T PDUSTM32_B;
 
 /* Block states (default storage) */
 extern DW_PDUSTM32_T PDUSTM32_DW;
+
+/* External data declarations for dependent source files */
+extern const real_T PDUSTM32_RGND;     /* real_T ground */
 extern const ConstB_PDUSTM32_T PDUSTM32_ConstB;/* constant block i/o */
 
 /* Constant parameters (default storage) */
@@ -295,7 +295,9 @@ extern volatile boolean_T runModel;
  * Block '<S9>/Data Type Propagation' : Unused code path elimination
  * Block '<S34>/FixPt Data Type Duplicate' : Unused code path elimination
  * Block '<S35>/FixPt Data Type Duplicate1' : Unused code path elimination
- * Block '<Root>/Data Type Conversion1' : Eliminate redundant data type conversion
+ * Block '<Root>/Data Type Conversion' : Unused code path elimination
+ * Block '<Root>/Data Type Conversion1' : Unused code path elimination
+ * Block '<Root>/Data Type Conversion2' : Unused code path elimination
  */
 
 /*-
@@ -345,7 +347,7 @@ extern volatile boolean_T runModel;
  * '<S30>'  : 'PDUSTM32/CAN Tx/MATLAB Function'
  * '<S31>'  : 'PDUSTM32/CAN Tx/MATLAB Function1'
  * '<S32>'  : 'PDUSTM32/CAN Tx/MATLAB Function2'
- * '<S33>'  : 'PDUSTM32/CAN Tx/MATLAB Function4'
+ * '<S33>'  : 'PDUSTM32/CAN Tx/MATLAB Function3'
  * '<S34>'  : 'PDUSTM32/Counter Limited/Increment Real World'
  * '<S35>'  : 'PDUSTM32/Counter Limited/Wrap To Zero'
  * '<S36>'  : 'PDUSTM32/Digital Port Read1/ECSoC'

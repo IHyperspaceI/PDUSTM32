@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>STW</name>
+	<name>PDUSTM32</name>
 	<comment></comment>
 	<projects>
 	</projects>
@@ -32,9 +32,9 @@
 	</natures>
 	<linkedResources>
 		<link>
-			<name>STW.ioc</name>
+			<name>PDUSTM32.ioc</name>
 			<type>1</type>
-			<locationURI>PARENT-1-PROJECT_LOC/STW.ioc</locationURI>
+			<locationURI>PARENT-1-PROJECT_LOC/PDUSTM32.ioc</locationURI>
 		</link>
 		<link>
 			<name>Drivers/CMSIS/system_stm32h7xx.c</name>

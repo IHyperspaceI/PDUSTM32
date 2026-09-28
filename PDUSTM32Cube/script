@@ -1,9 +1,9 @@
-config load "C:\Users\oxbro\Documents\STM32CustomProjects\PDUSTM32\PDUSTM32Cube\PDUSTM32.ioc"
+config load "C:\Users\Will\Desktop\OBR\Embedded\PDUSTM32\PDUSTM32Cube\PDUSTM32.ioc"
 project toolchain STM32CubeIDE
 
 SetStructure Advanced
 
-project setCustomFWPath "C:\Users\oxbro\STM32Cube\Repository\STM32Cube_FW_H7_V1.9.1"
+project setCustomFWPath "C:\Users\Will\STM32Cube\Repository\STM32Cube_FW_H7_V1.9.1"
 
 project generate 
 
